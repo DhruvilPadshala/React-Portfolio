@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+}
+
+.desktop-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.desktop-menu li {
+  margin: 0 1rem;
+}
+
+.desktop-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;  font-weight: 600; /* Semi-bold */
+}
+
+.desktop-menu a:hover {
+  text-decoration: underline;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
   }
 }
+.header .logo-container {
+  display: flex;
+  align-items: center;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header .logo-text {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  font-weight: 600; /* Semi-bold */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styles for drawer content */
+.drawer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drawer-logo-text {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-weight: 600; /* Semi-bold */
+
 }
