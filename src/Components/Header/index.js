@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "../../../src/App.css";
-import logo from '../../assets/logo192.png'
+import logo from '../../assets/Logo/Dhruvil-modified.png';
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
