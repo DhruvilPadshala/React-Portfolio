@@ -96,3 +96,101 @@
   font-weight: 600; /* Semi-bold */
 
 }
+.rn-slider-area {
+  background-color:white;
+  padding: 50px 0;
+}
+
+.thumbnail {
+  text-align: center;
+}
+
+.profile-pic {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.text {
+  padding: 20px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 36px;
+  color: #111;
+}
+
+.highlight {
+  color: #ff4b5c;
+}
+
+.header-caption {
+  font-size: 24px;
+  color: #ff4b5c;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.socials {
+  margin-top: 40px;
+}
+
+.socials-title {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.icon:hover {
+  background-color: #f0f0f0;
+}
+
+.cd-words-wrapper {
+  position: relative;
+  display: inline-block;
+  height: 1em; /* Adjust as needed to fit your text */
+  overflow: hidden;
+  color: #333;
+}
+
+.cd-words-wrapper b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.cd-words-wrapper .is-visible {
+  opacity: 1;
+  position: relative;
+}
+
+.cd-words-wrapper .is-hidden {
+  opacity: 0;
+  position: absolute;
+}
+
