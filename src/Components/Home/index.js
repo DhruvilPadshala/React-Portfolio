@@ -3,9 +3,6 @@ import { Container, Box, Typography, Grid, Avatar } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InIcon from "@mui/icons-material/InsertPhoto"; // Replace with the correct icon
-import SketchIcon from "@mui/icons-material/InsertPhoto"; // Replace with the correct icon
-import FigmaIcon from "@mui/icons-material/InsertPhoto"; // Replace with the correct icon
 import profilePic from "../../assets/Home/Dhruvil.jpg";
 
 const Home = () => {
@@ -13,10 +10,7 @@ const Home = () => {
     <Container className="rn-slider-area" sx={{ p: 4 }}>
       <Grid container spacing={6} alignItems="center">
         <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
-          <Box
-            className="text"
-            sx={{ textAlign: { xs: "left", md: "left" }}}
-          >
+          <Box className="text" sx={{ textAlign: { xs: "", md: "left" } }}>
             <Typography variant="body1">Welcome to my world</Typography>
             <Box
               sx={{
@@ -31,7 +25,7 @@ const Home = () => {
               <Typography
                 variant="h4"
                 sx={{
-                  fontSize: { xs: "2rem", sm: "2rem", md: "3rem" },
+                  fontSize: { xs: "1.60rem", sm: "2rem", md: "3rem" },
                   fontWeight: "bold",
                   textAlign: { xs: "left", md: "left" },
                   color: "black",
@@ -42,10 +36,10 @@ const Home = () => {
                   variant="h4"
                   component="span"
                   sx={{
-                    color: "red",
+                    color: "blue",
                     ml: 1,
                     fontWeight: "bold",
-                    fontSize: { xs: "2rem", sm: "2rem", md: "3rem" },
+                    fontSize: { xs: "1.60rem", sm: "2rem", md: "3rem" },
                   }}
                 >
                   Dhruvil
@@ -54,10 +48,10 @@ const Home = () => {
               <Typography
                 variant="h4"
                 sx={{
-                  fontSize: { xs: "1.5rem", sm: "2rem", md: "3rem" },
+                  fontSize: { xs: "1.60rem", sm: "2rem", md: "3rem" },
                   fontWeight: "bold",
                   textAlign: { xs: "left", md: "left" },
-                  color: "red",
+                  color: "blue",
                   mt: 1,
                 }}
               >
@@ -67,7 +61,7 @@ const Home = () => {
                   component="span"
                   sx={{
                     color: "black",
-                    fontSize: { xs: "1.5rem", sm: "2rem", md: "3rem" },
+                    fontSize: { xs: "1.60rem", sm: "2rem", md: "3rem" },
                     ml: 1,
                   }}
                 >
@@ -80,7 +74,7 @@ const Home = () => {
               className="description"
               sx={{
                 mt: 2,
-                fontSize: { xs: "0.875rem", sm: "1rem", md: "1.125rem" },
+                fontSize: { xs: "1rem", sm: "1rem", md: "1.125rem" },
                 textAlign: { xs: "left", md: "left" },
                 px: { xs: 3, sm: 4, md: 0 },
                 lineHeight: { xs: "1.5", sm: "1.75", md: "2" },
@@ -149,35 +143,119 @@ const SocialsSection = () => {
               justifyContent="center"
               mt={2}
             >
-              <Avatar sx={{ m: 1, bgcolor: "#ffffff" }}>
+              <Avatar
+                sx={{
+                  m: 1,
+                  bgcolor: "#ffffff",
+                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                  borderRadius: "8px",
+                  width: 48,
+                  height: 48,
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
+                  },
+                }}
+              >
                 <FacebookIcon color="primary" />
               </Avatar>
-              <Avatar sx={{ m: 1, bgcolor: "#ffffff" }}>
+              <Avatar
+                sx={{
+                  m: 1,
+                  bgcolor: "#ffffff",
+                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                  borderRadius: "8px",
+                  width: 48,
+                  height: 48,
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
+                  },
+                }}
+              >
                 <InstagramIcon color="secondary" />
               </Avatar>
-              <Avatar sx={{ m: 1, bgcolor: "#ffffff" }}>
+              <Avatar
+                sx={{
+                  m: 1,
+                  bgcolor: "#ffffff",
+                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                  borderRadius: "8px",
+                  width: 48,
+                  height: 48,
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
+                  },
+                }}
+              >
                 <LinkedInIcon color="primary" />
               </Avatar>
             </Box>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Box className="skills" textAlign="center">
-            <Typography variant="body1">BEST SKILL ON</Typography>
+          <Box className="skill" textAlign="center">
+            <Typography variant="body1">BEST SILL ON </Typography>
             <Box
               className="icons"
               display="flex"
               justifyContent="center"
               mt={2}
             >
-              <Avatar sx={{ m: 1, bgcolor: "#ffffff" }}>
-                <InIcon sx={{ color: "#E1306C" }} />
+              <Avatar
+                sx={{
+                  m: 1,
+                  bgcolor: "#ffffff",
+                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                  borderRadius: "8px",
+                  width: 48,
+                  height: 48,
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
+                  },
+                }}
+              >
+                <FacebookIcon color="primary" />
               </Avatar>
-              <Avatar sx={{ m: 1, bgcolor: "#ffffff" }}>
-                <SketchIcon sx={{ color: "#FDB300" }} />
+              <Avatar
+                sx={{
+                  m: 1,
+                  bgcolor: "#ffffff",
+                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                  borderRadius: "8px",
+                  width: 48,
+                  height: 48,
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
+                  },
+                }}
+              >
+                <InstagramIcon color="secondary" />
               </Avatar>
-              <Avatar sx={{ m: 1, bgcolor: "#ffffff" }}>
-                <FigmaIcon sx={{ color: "#F24E1E" }} />
+              <Avatar
+                sx={{
+                  m: 1,
+                  bgcolor: "#ffffff",
+                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                  borderRadius: "8px",
+                  width: 48,
+                  height: 48,
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
+                  },
+                }}
+              >
+                <LinkedInIcon color="primary" />
               </Avatar>
             </Box>
           </Box>
