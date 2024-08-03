@@ -16,7 +16,7 @@ const SocialsSection = () => {
               className="icons"
               display="flex"
               justifyContent="center"
-              mt={2}
+              sx={{ mt: { xs: 0, md: 2 } }}
             >
               <Facebook />
               <Instagram />
