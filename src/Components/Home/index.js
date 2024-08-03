@@ -6,17 +6,33 @@ import SocialsSection from "./index3";
 
 const Home = () => {
   return (
-    <Container className="rn-slider-area" sx={{ p: 4 ,backgroundColor: "#f0f2f5",mt:10}}>
+    <Container
+      className="rn-slider-area"
+      sx={{ p: 4, backgroundColor: "#f0f2f5", mt: { xs: -2, md: 10 } }}
+    >
       <Grid container spacing={6} alignItems="center">
         <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
           <Box className="text" sx={{ textAlign: { xs: "left", md: "left" } }}>
-            <Typography variant="body1">WELCOME TO MY WORLD</Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: { xs: "1rem", sm: "1rem", md: "1.125rem" },
+                textAlign: { xs: "center", md: "left" },
+                mt: { xs: -5, md: 0 },
+              }}
+            >
+              WELCOME TO MY WORLD
+            </Typography>
             <Box
               sx={{
                 display: "flex",
                 flexDirection: "column",
                 alignItems: { xs: "left", md: "flex-start" },
-                p: 2,
+                p: {
+                  xs: 0,
+                  md: 2,
+                },
+                mt: { xs: 2, md: 0 },
                 borderRadius: "10px",
               }}
             >
@@ -37,7 +53,7 @@ const Home = () => {
                     color: "blue",
                     ml: 1,
                     fontWeight: "bold",
-                    fontSize: { xs: "1.60rem", sm: "2rem", md: "3rem" },
+                    fontSize: { xs: "1.85rem", sm: "2rem", md: "3rem" },
                   }}
                 >
                   Dhruvil
@@ -46,7 +62,7 @@ const Home = () => {
               <Typography
                 variant="h4"
                 sx={{
-                  fontSize: { xs: "1.60rem", sm: "2rem", md: "3rem" },
+                  fontSize: { xs: "1.85rem", sm: "2rem", md: "3rem" },
                   fontWeight: "bold",
                   textAlign: { xs: "left", md: "left" },
                   color: "blue",
@@ -59,7 +75,7 @@ const Home = () => {
                   component="span"
                   sx={{
                     color: "black",
-                    fontSize: { xs: "1.60rem", sm: "2rem", md: "3rem" },
+                    fontSize: { xs: "1.85rem", sm: "2rem", md: "3rem" },
                     ml: 1,
                   }}
                 >
@@ -74,7 +90,6 @@ const Home = () => {
                 mt: 2,
                 fontSize: { xs: "1rem", sm: "1rem", md: "1.125rem" },
                 textAlign: { xs: "left", md: "left" },
-                px: { xs: 3, sm: 4, md: 0 },
                 lineHeight: { xs: "1.5", sm: "1.75", md: "2" },
               }}
             >
