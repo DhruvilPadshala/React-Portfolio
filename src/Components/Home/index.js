@@ -6,10 +6,10 @@ import SocialsSection from "./index3";
 
 const Home = () => {
   return (
-    <Container className="rn-slider-area" sx={{ p: 4 }}>
+    <Container className="rn-slider-area" sx={{ p: 4 ,backgroundColor: "#f0f2f5",mt:10}}>
       <Grid container spacing={6} alignItems="center">
         <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
-          <Box className="text" sx={{ textAlign: { xs: "", md: "left" } }}>
+          <Box className="text" sx={{ textAlign: { xs: "left", md: "left" } }}>
             <Typography variant="body1">WELCOME TO MY WORLD</Typography>
             <Box
               sx={{
@@ -17,7 +17,6 @@ const Home = () => {
                 flexDirection: "column",
                 alignItems: { xs: "left", md: "flex-start" },
                 p: 2,
-                backgroundColor: "white",
                 borderRadius: "10px",
               }}
             >
@@ -102,6 +101,5 @@ const Home = () => {
     </Container>
   );
 };
-
 
 export default Home;

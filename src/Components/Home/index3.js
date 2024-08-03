@@ -7,7 +7,7 @@ import Node from "../../assets/Home/Node.png";
 
 const SocialsSection = () => {
   return (
-    <Box className="index" sx={{ p: 4, backgroundColor: "white" }}>
+    <Box className="index" sx={{ p: 4 }}>
       <Grid container spacing={4} justifyContent="center">
         <Grid item xs={12} md={6}>
           <Box className="socials" textAlign="center">
