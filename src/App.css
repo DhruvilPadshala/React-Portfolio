@@ -1,10 +1,9 @@
-/* Header.css */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #fff;
+  background-color: #f0f2f5;
   border-bottom: 1px solid #ddd;
 }
 
@@ -37,7 +36,8 @@
 .desktop-menu a {
   text-decoration: none;
   color: #333;
-  font-size: 1rem;  font-weight: 600; /* Semi-bold */
+  font-size: 1rem;
+  font-weight: 600; /* Semi-bold */
 }
 
 .desktop-menu a:hover {
@@ -60,12 +60,14 @@
 
   .mobile-menu {
     display: block;
+    background-color:#f0f2f5 ;
   }
 
   .menu-icon {
     display: block;
   }
 }
+
 .header .logo-container {
   display: flex;
   align-items: center;
@@ -83,7 +85,6 @@
   font-weight: 600; /* Semi-bold */
 }
 
-/* Styles for drawer content */
 .drawer-logo {
   display: flex;
   flex-direction: column;
@@ -94,5 +95,85 @@
   margin-top: 0.5rem;
   text-align: center;
   font-weight: 600; /* Semi-bold */
+}
 
+.rn-slider-area {
+  background-color: #f0f2f5;
+  padding: 50px 0;
+  width: 100%;
+  height: 90vh;
+  align-items: center;
+}
+
+.thumbnail {
+  text-align: center;
+}
+
+.profile-pic {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.text {
+  padding: 20px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 36px;
+  color: #111;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #ff4b5c;
+}
+
+.header-caption {
+  font-size: 24px;
+  color: #ff4b5c;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.cd-words-wrapper {
+  position: relative;
+  display: inline-block;
+  height: 1em; /* Adjust as needed to fit your text */
+  overflow: hidden;
+  color: #333;
+}
+
+.cd-words-wrapper b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.cd-words-wrapper .is-visible {
+  opacity: 1;
+  position: relative;
+}
+
+.cd-words-wrapper .is-hidden {
+  opacity: 0;
+  position: absolute;
+}
+
+.backgroung-color {
+  background-color: #f0f2f5;
 }
