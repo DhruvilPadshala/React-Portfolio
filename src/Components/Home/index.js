@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Container, Box, Typography, Grid, Avatar } from "@mui/material";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import React from "react";
+import { Container, Box, Typography, Grid } from "@mui/material";
 import profilePic from "../../assets/Home/Dhruvil.jpg";
+import AlternatingText from "./index2";
+import SocialsSection from "./index3";
 
 const Home = () => {
   return (
@@ -11,7 +10,7 @@ const Home = () => {
       <Grid container spacing={6} alignItems="center">
         <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
           <Box className="text" sx={{ textAlign: { xs: "", md: "left" } }}>
-            <Typography variant="body1">Welcome to my world</Typography>
+            <Typography variant="body1">WELCOME TO MY WORLD</Typography>
             <Box
               sx={{
                 display: "flex",
@@ -104,165 +103,5 @@ const Home = () => {
   );
 };
 
-const AlternatingText = () => {
-  const words = ["Developer.", "Professional coder", "Programmer."];
-  const [visibleIndex, setVisibleIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setVisibleIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 5000); // Change the interval time as needed
-
-    return () => clearInterval(intervalId);
-  }, [words.length]);
-
-  return (
-    <div className="cd-words-wrapper" style={{ fontWeight: "normal" }}>
-      {words.map((word, index) => (
-        <b
-          key={index}
-          className={index === visibleIndex ? "is-visible" : "is-hidden"}
-        >
-          {word}
-        </b>
-      ))}
-    </div>
-  );
-};
-
-const SocialsSection = () => {
-  return (
-    <Box className="index" sx={{ p: 4, backgroundColor: "white" }}>
-      <Grid container spacing={4} justifyContent="center">
-        <Grid item xs={12} md={6}>
-          <Box className="socials" textAlign="center">
-            <Typography variant="body1">FIND WITH ME</Typography>
-            <Box
-              className="icons"
-              display="flex"
-              justifyContent="center"
-              mt={2}
-            >
-              <Avatar
-                sx={{
-                  m: 1,
-                  bgcolor: "#ffffff",
-                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-                  borderRadius: "8px",
-                  width: 48,
-                  height: 48,
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <FacebookIcon color="primary" />
-              </Avatar>
-              <Avatar
-                sx={{
-                  m: 1,
-                  bgcolor: "#ffffff",
-                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-                  borderRadius: "8px",
-                  width: 48,
-                  height: 48,
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <InstagramIcon color="secondary" />
-              </Avatar>
-              <Avatar
-                sx={{
-                  m: 1,
-                  bgcolor: "#ffffff",
-                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-                  borderRadius: "8px",
-                  width: 48,
-                  height: 48,
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <LinkedInIcon color="primary" />
-              </Avatar>
-            </Box>
-          </Box>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Box className="skill" textAlign="center">
-            <Typography variant="body1">BEST SILL ON </Typography>
-            <Box
-              className="icons"
-              display="flex"
-              justifyContent="center"
-              mt={2}
-            >
-              <Avatar
-                sx={{
-                  m: 1,
-                  bgcolor: "#ffffff",
-                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-                  borderRadius: "8px",
-                  width: 48,
-                  height: 48,
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <FacebookIcon color="primary" />
-              </Avatar>
-              <Avatar
-                sx={{
-                  m: 1,
-                  bgcolor: "#ffffff",
-                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-                  borderRadius: "8px",
-                  width: 48,
-                  height: 48,
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <InstagramIcon color="secondary" />
-              </Avatar>
-              <Avatar
-                sx={{
-                  m: 1,
-                  bgcolor: "#ffffff",
-                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-                  borderRadius: "8px",
-                  width: 48,
-                  height: 48,
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                    boxShadow: "0px 8px 12px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <LinkedInIcon color="primary" />
-              </Avatar>
-            </Box>
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
-  );
-};
 
 export default Home;
