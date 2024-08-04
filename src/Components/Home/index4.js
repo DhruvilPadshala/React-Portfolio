@@ -20,7 +20,7 @@ const Facebook = () => {
     <Avatar
       sx={{
         m: 1,
-        bgcolor: "#ffffff",
+        bgcolor: "#f0f2f5",
         boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
         borderRadius: "8px",
         width: 48,
@@ -56,7 +56,7 @@ const Instagram = () => {
       <Avatar
         sx={{
           m: 1,
-          bgcolor: "#ffffff",
+          bgcolor: "#f0f2f5",
           boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
           borderRadius: "8px",
           width: 48,
@@ -92,7 +92,7 @@ const Instagram = () => {
       <Avatar
         sx={{
           m: 1,
-          bgcolor: "#ffffff",
+          bgcolor: "#f0f2f5",
           boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
           borderRadius: "8px",
           width: 48,
