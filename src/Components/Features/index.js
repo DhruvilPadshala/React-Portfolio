@@ -3,7 +3,7 @@ import {
   Container,
   Grid,
   Card,
-  CardContent,
+  CardContent as MuiCardContent,
   Typography,
   Box,
 } from "@mui/material";
@@ -19,33 +19,59 @@ const Root = styled(Box)(({ theme }) => ({
   backgroundColor: "#f0f2f5",
   minHeight: "100vh",
   padding: theme.spacing(5),
+  [theme.breakpoints.down("sm")]: {
+    padding: theme.spacing(2),
+  },
 }));
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(3),
   color: "#333",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1.5rem",
+    textAlign: "center",
+  },
 }));
 
-const CustomCard = styled(Card)(({ theme }) => ({
+const CustomCard = styled(Card)(({ theme, title }) => ({
   display: "flex",
-  width:"350px",
+  width: "350px",
   height: "250px",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "flex-start",
   padding: theme.spacing(2),
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-  ...(props) =>
-    props.title === "App Development" && {
-      backgroundColor: "#ff1744", 
-      color: "#fff",
+  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  "&:hover": {
+    transform: "translateY(-5px)",
+    boxShadow: "0 8px 12px rgba(0, 0, 0, 0.2)",
+    backgroundColor: "blue", 
+    "& .MuiCardContent-root, & .MuiTypography-root, & .MuiSvgIcon-root": {
+      color: "white",
     },
+    "& .MuiCardContent-root": {
+      transform: "scale(1.05)",
+    },
+  },
+  [theme.breakpoints.down("sm")]: {
+    height: "auto",
+    width: "auto",
+    padding: theme.spacing(1),
+  },
 }));
 
 const IconWrapper = styled("div")(({ theme }) => ({
   marginBottom: theme.spacing(1),
   color: "#007bff", // Blue color for icons
   fontSize: "3rem",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "2rem",
+  },
+}));
+
+const CardContent = styled(MuiCardContent)(({ theme }) => ({
+  transition: "background-color 0.3s ease, transform 0.3s ease, color 0.3s ease",
 }));
 
 const services = [
@@ -90,12 +116,12 @@ const services = [
 const Features = () => {
   return (
     <Root>
-      <Container  >
-        <Typography variant="h6"color="primary">Features</Typography>
-        <SectionTitle variant="h4" gutterBottom mt={{xs: 2, md: 5}}>
+      <Container sx={{ mt: { xs: 40, md: -10 }, justifyContent: { xs: "center", md: "flex-start" } }}>
+        <Typography variant="h6" color="primary">Features</Typography>
+        <SectionTitle variant="h4" gutterBottom mt={{ xs: 2, md: 5 }} sx={{ textAlign: { xs: "left", md: "left" } }}>
           What I Do
         </SectionTitle>
-        <Grid container spacing={4}sx={{mt: {xs: 2, md: 5}}}>
+        <Grid container spacing={4} sx={{ mt: { xs: 2, md: 5 } }}>
           {services.map((service, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
               <CustomCard title={service.title}>
