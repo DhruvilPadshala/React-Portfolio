@@ -114,7 +114,6 @@ const Features = () => {
     <Root>
       <Container
         sx={{
-          mt: { xs: 40, md: 0 },
           justifyContent: { xs: "center", md: "flex-start" },
         }}
       >
