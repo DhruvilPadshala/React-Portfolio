@@ -58,7 +58,7 @@ const Portfolio = () => {
         alignItems: "center",
         display: "flex",
         flexDirection: "column",
-        width: "75%",
+        width: { xs: "85%", md: "75%" },
         margin: "0 auto",
       }}
     >
