@@ -121,10 +121,11 @@ const Features = () => {
           Features
         </Typography>
         <SectionTitle
-          variant="h4"
+          variant="h2"
+          fontWeight={"bold"}
           gutterBottom
           mt={{ xs: 2, md: 5 }}
-          sx={{ textAlign: { xs: "left", md: "left" } }}
+          sx={{ textAlign: { xs: "left", md: "left" } ,fontSize:{xs:"2.5rem",md:"4rem"}}}
         >
           What I Do
         </SectionTitle>
