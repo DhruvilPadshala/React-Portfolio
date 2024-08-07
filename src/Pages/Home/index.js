@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <Container
       className="rn-slider-area"
-      sx={{ p: 4, backgroundColor: "#f0f2f5", mt: { xs: -2, md: 10 } ,height:{xs:"auto",md:"80vh"}}}
+      sx={{ p: 4, backgroundColor: "#f0f2f5", mt: { xs: 10, md: 20 } ,height:{xs:"auto",md:"80vh"}}}
     >
       <Grid container spacing={6} alignItems="center">
         <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
