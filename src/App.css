@@ -261,4 +261,24 @@ a:hover::after {
 
 .card-content {
   padding: 16px;
+  background-color: #f0f2f5;
+}
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    width: 95%;
+  }
+  .tab {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .tab:hover {
+    width: 100%;
+    height: auto;
+  }
 }
