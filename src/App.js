@@ -1,8 +1,8 @@
-import "./App.css";
-import Header from "./Components/Header";
-import Home from "./Components/Home"
-import Features from "./Components/Features"
-import Portfolio from "./Components/Portfolio"
+// import "./App.css";
+import Header from "./Pages/Header";
+import Home from "./Pages/Home"
+import Features from "./Pages/Features"
+import Portfolio from "./Pages/Portfolio"
 
 function App() {
   return (

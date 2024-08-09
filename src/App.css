@@ -1,10 +1,15 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   background-color: #f0f2f5;
   border-bottom: 1px solid #ddd;
+  z-index: 1000; /* Ensure the header stays on top of other content */
 }
 
 .logo-text {
@@ -25,6 +30,7 @@
 .desktop-menu ul {
   list-style: none;
   margin: 0;
+  margin-right: 10px;
   padding: 0;
   display: flex;
 }
@@ -38,10 +44,44 @@
   color: #333;
   font-size: 1rem;
   font-weight: 600; /* Semi-bold */
+  transition: color 0.3s;
 }
 
 .desktop-menu a:hover {
-  text-decoration: underline;
+  color: #555; /* Hover color */
+}
+
+.desktop-menu .active {
+  color: black; /* Active link color */
+}
+
+.desktop-menu .inactive {
+  color: #555; /* Inactive link color */
+}
+
+a {
+  position: relative;
+  cursor: pointer;
+  color: #000;
+  transition: color 0.5s;
+}
+
+a::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: #f0f2f5;
+  scale: 1 0;
+  z-index: -1;
+  transition: scale 0.5s;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:hover::after {
+  scale: 1 1;
 }
 
 .mobile-menu {
@@ -60,7 +100,7 @@
 
   .mobile-menu {
     display: block;
-    background-color:#f0f2f5 ;
+    background-color: #f0f2f5;
   }
 
   .menu-icon {
@@ -174,6 +214,9 @@
   position: absolute;
 }
 
-.backgroung-color {
+.background-color {
   background-color: #f0f2f5;
+}
+.main-content {
+  padding-top: 80px; /* Adjust this value based on the height of your header */
 }
