@@ -3,6 +3,7 @@ import Header from "./Pages/Header";
 import Home from "./Pages/Home"
 import Features from "./Pages/Features"
 import Portfolio from "./Pages/Portfolio"
+import Contact from "./Pages/Contact"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Home />
       <Features />
       <Portfolio />
+      <Contact />
     </div>
   );
 }
