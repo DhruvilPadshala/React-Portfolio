@@ -1,11 +1,11 @@
 import "./App.css";
-import Header from "./Pages/Header";
-import Home from "./Pages/Home"
-import Features from "./Pages/Features"
-import Portfolio from "./Pages/Portfolio"
-import Resume from './Pages/Resume'
-import Contact from "./Pages/Contact"
-import Footer from "./Pages/Footer";
+import Header from "./Components/Header";
+import Home from "./Components/Home"
+import Features from "./Components/Features"
+import Portfolio from "./Components/Portfolio"
+import Resume from './Components/Resume'
+import Contact from "./Components/Contact"
+import Footer from "./Components/Footer";
 
 function App() {
   return (

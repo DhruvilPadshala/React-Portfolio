@@ -12,7 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "../../../src/App.css";
 import logo from "../../assets/Logo/Dhruvil-modified.png";
 import { Facebook, Instagram, LinkedIn } from "../Home/index4";
-
+import { navLinksdata } from "../../Constant/index";
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -46,16 +46,13 @@ const Header = () => {
         <img src={logo} alt="Dhruvil" width={50} height={50} />
       </Typography>
       <List>
-        {[
-          "Home",
-          "Features",
-          "Portfolio",
-          "Resume",
-          "Blog",
-          "Contact",
-        ].map((text, index) => (
-          <ListItem button key={index}>
-            <ListItemText primary={text} />
+        {navLinksdata.map((item) => (
+          <ListItem
+            button
+            key={item._id}
+            onClick={() => handleLinkClick(`#${item.link}`)}
+          >
+            <ListItemText primary={item.title} />
           </ListItem>
         ))}
       </List>
@@ -83,21 +80,16 @@ const Header = () => {
         <nav className="menu">
           <div className="desktop-menu">
             <ul>
-              {[
-                "Home",
-                "Features",
-                "Portfolio",
-                "Resume",
-                "Blog",
-                "Contact",
-              ].map((link) => (
-                <li key={link}>
+              {navLinksdata.map((item) => (
+                <li key={item._id}>
                   <a
-                    href={link}
-                    className={activeLink === link ? "active" : "inactive"}
-                    onClick={() => handleLinkClick(link)}
+                    href={`#${item.link}`}
+                    className={
+                      activeLink === `#${item.link}` ? "active" : "inactive"
+                    }
+                    onClick={() => handleLinkClick(`#${item.link}`)}
                   >
-                    {link.replace("#", "")}
+                    {item.title}
                   </a>
                 </li>
               ))}

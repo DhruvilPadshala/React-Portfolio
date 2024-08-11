@@ -6,6 +6,7 @@ import ContactForm from "./index2";
 
 const Contact = () => {
   return (
+    <section id="contact">
     <Box
       sx={{
         backgroundColor: "#f0f2f5",
@@ -88,7 +89,7 @@ const Contact = () => {
         {/* Right Panel */}
           <ContactForm />
       </Grid>
-    </Box>
+    </Box></section>
   );
 };
 export default Contact;

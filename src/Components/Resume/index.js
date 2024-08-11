@@ -112,114 +112,117 @@ const Resume = () => {
   };
 
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        p: 2,
-        backgroundColor: "#f0f2f5",
-        justifyContent: "center",
-        alignItems: "center",
-        display: "flex",
-        flexDirection: "column",
-        width: { xs: "90%", md: "75%" },
-        margin: "0 auto",
-        mt: { xs: 3, md: 3 },
-      }}
-    >
-      <Typography
-        variant="h2"
-        component="h2"
-        fontWeight={"bold"}
-        gutterBottom
-        align="center"
+    <section id="resume">
+      {" "}
+      <Box
         sx={{
-          fontSize: { xs: "2.5rem", md: "4rem" },
-          textAlign: "center",
-        }}
-      >
-        My Resume
-      </Typography>
-      <Tabs
-        value={selectedTab}
-        onChange={handleTabChange}
-        aria-label="resume tabs"
-        className="tabs"
-        TabIndicatorProps={{ style: { display: "none" } }} // Remove bottom line indicator
-        sx={{
-          mb: 2,
-          mt: 3,
+          flexGrow: 1,
+          p: 2,
+          backgroundColor: "#f0f2f5",
           justifyContent: "center",
           alignItems: "center",
-          width: { xs: "100%", md: "75%" },
-          flexWrap: "wrap",
-          "& .MuiTabs-flexContainer": {
-            flexDirection: { xs: "column", md: "row" },
-          },
-          "& .MuiTab-root": {
-            textAlign: "center",
-          },
+          display: "flex",
+          flexDirection: "column",
+          width: { xs: "90%", md: "75%" },
+          margin: "0 auto",
+          mt: { xs: 3, md: 3 },
         }}
       >
-        <Tab
-          label="Education"
-          sx={{ fontWeight: "bold" }}
-          className={`tab ${selectedTab === 0 ? "Mui-selected" : ""}`}
-        />
-        <Tab
-          label="Design Skills"
-          sx={{ fontWeight: "bold" }}
-          className={`tab ${selectedTab === 1 ? "Mui-selected" : ""}`}
-        />
-        <Tab
-          label="Skills"
-          sx={{ fontWeight: "bold" }}
-          className={`tab ${selectedTab === 2 ? "Mui-selected" : ""}`}
-        />
-      </Tabs>
+        <Typography
+          variant="h2"
+          component="h2"
+          fontWeight={"bold"}
+          gutterBottom
+          align="center"
+          sx={{
+            fontSize: { xs: "2.5rem", md: "4rem" },
+            textAlign: "center",
+          }}
+        >
+          My Resume
+        </Typography>
+        <Tabs
+          value={selectedTab}
+          onChange={handleTabChange}
+          aria-label="resume tabs"
+          className="tabs"
+          TabIndicatorProps={{ style: { display: "none" } }} // Remove bottom line indicator
+          sx={{
+            mb: 2,
+            mt: 3,
+            justifyContent: "center",
+            alignItems: "center",
+            width: { xs: "100%", md: "75%" },
+            flexWrap: "wrap",
+            "& .MuiTabs-flexContainer": {
+              flexDirection: { xs: "column", md: "row" },
+            },
+            "& .MuiTab-root": {
+              textAlign: "center",
+            },
+          }}
+        >
+          <Tab
+            label="Education"
+            sx={{ fontWeight: "bold" }}
+            className={`tab ${selectedTab === 0 ? "Mui-selected" : ""}`}
+          />
+          <Tab
+            label="Design Skills"
+            sx={{ fontWeight: "bold" }}
+            className={`tab ${selectedTab === 1 ? "Mui-selected" : ""}`}
+          />
+          <Tab
+            label="Skills"
+            sx={{ fontWeight: "bold" }}
+            className={`tab ${selectedTab === 2 ? "Mui-selected" : ""}`}
+          />
+        </Tabs>
 
-      <Grid container spacing={3} sx={{ mt: 2 }}>
-        {contentData[selectedTab].map((item, index) => (
-          <Grid item xs={12} md={6} key={index}>
-            <Typography
-              sx={{ fontSize: { xs: "1.5rem", md: "2rem" } }}
-              gutterBottom
-              fontWeight={"bold"}
-            >
-              {item.title}
-            </Typography>
-            <Card
-              sx={{
-                height: { xs: "auto", md: "280px" },
-                width: { xs: "auto", md: "90%" },
-                backgroundColor: "#f0f2f5",
-                transition: "background-color 0.3s, color 0.3s",
-                "&:hover": {
-                  backgroundColor: "blue",
-                  color: "white",
-                  "& .MuiTypography-root": {
+        <Grid container spacing={3} sx={{ mt: 2 }}>
+          {contentData[selectedTab].map((item, index) => (
+            <Grid item xs={12} md={6} key={index}>
+              <Typography
+                sx={{ fontSize: { xs: "1.5rem", md: "2rem" } }}
+                gutterBottom
+                fontWeight={"bold"}
+              >
+                {item.title}
+              </Typography>
+              <Card
+                sx={{
+                  height: { xs: "auto", md: "280px" },
+                  width: { xs: "auto", md: "90%" },
+                  backgroundColor: "#f0f2f5",
+                  transition: "background-color 0.3s, color 0.3s",
+                  "&:hover": {
+                    backgroundColor: "blue",
                     color: "white",
+                    "& .MuiTypography-root": {
+                      color: "white",
+                    },
                   },
-                },
-              }}
-            >
-              <CardContent sx={{ p: 4 }}>
-                <Typography
-                  sx={{ fontSize: { xs: "1.2rem", md: "1.5rem" } }}
-                  fontWeight={"semi-bold"}
-                  color={"black"}
-                >
-                  {item.subTitle}
-                </Typography>
-                <Typography color="textSecondary" mb={4}>
-                  {item.subTitle1}
-                </Typography>
-                <Typography paragraph>{item.description}</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+                }}
+              >
+                <CardContent sx={{ p: 4 }}>
+                  <Typography
+                    sx={{ fontSize: { xs: "1.2rem", md: "1.5rem" } }}
+                    fontWeight={"semi-bold"}
+                    color={"black"}
+                  >
+                    {item.subTitle}
+                  </Typography>
+                  <Typography color="textSecondary" mb={4}>
+                    {item.subTitle1}
+                  </Typography>
+                  <Typography paragraph>{item.description}</Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+    </section>
   );
 };
 

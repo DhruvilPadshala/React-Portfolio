@@ -92,66 +92,78 @@ const services = [
   {
     icon: <TvIcon fontSize="large" />,
     title: "Web Development",
-    description:"Crafting engaging and functional websites with a focus on clean design and responsive functionality. Explore my portfolio to see how I turn innovative ideas into compelling digital experiences.",
+    description:
+      "Crafting engaging and functional websites with a focus on clean design and responsive functionality. Explore my portfolio to see how I turn innovative ideas into compelling digital experiences.",
   },
   {
     icon: <PhoneAndroidIcon fontSize="large" />,
     title: "App Development",
-    description:"We specialize in crafting custom mobile and web applications tailored to your business needs. Our expert team combines cutting-edge technology with user-centric design to deliver seamless, high-performance solutions.",  },
+    description:
+      "We specialize in crafting custom mobile and web applications tailored to your business needs. Our expert team combines cutting-edge technology with user-centric design to deliver seamless, high-performance solutions.",
+  },
   {
     icon: <WysiwygIcon fontSize="large" />,
     title: "Software Development",
-    description:"Our SaaS offerings provide tailored software development to meet your unique needs, from initial design to ongoing support. Enhance efficiency and drive innovation with our expert team.",  },
+    description:
+      "Our SaaS offerings provide tailored software development to meet your unique needs, from initial design to ongoing support. Enhance efficiency and drive innovation with our expert team.",
+  },
 
   {
     icon: <SignalCellularAltIcon fontSize="large" />,
     title: "Social Media Marketing",
-    description:"Boost your online presence with our tailored social media strategies. From engaging content to targeted ads, we drive growth and enhance your brand’s reach. Let’s connect and transform your social media into a powerful marketing tool.",  },
+    description:
+      "Boost your online presence with our tailored social media strategies. From engaging content to targeted ads, we drive growth and enhance your brand’s reach. Let’s connect and transform your social media into a powerful marketing tool.",
+  },
 ];
 
 const Features = () => {
   return (
-    <Root>
-      <Container
-        sx={{
-          justifyContent: { xs: "center", md: "flex-start" },
-        }}
-      >
-        <Typography variant="h6" color="primary">
-          Features
-        </Typography>
-        <SectionTitle
-          variant="h2"
-          fontWeight={"bold"}
-          gutterBottom
-          mt={{ xs: 2, md: 5 }}
-          sx={{ textAlign: { xs: "left", md: "left" } ,fontSize:{xs:"2.5rem",md:"4rem"}}}
+    <section id="features">
+      <Root>
+        <Container
+          sx={{
+            justifyContent: { xs: "center", md: "flex-start" },
+          }}
         >
-          What I Do
-        </SectionTitle>
-        <Grid container spacing={4} sx={{ mt: { xs: 2, md: 5 } }}>
-          {services.map((service, index) => (
-            <Grid item xs={12} sm={6} key={index}>
-              <CustomCard title={service.title}>
-                <IconWrapper>{service.icon}</IconWrapper>
-                <CardContent>
-                  <Typography variant="h6" fontWeight="bold" marginBottom={1}>
-                    {service.title}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    textAlign="left"
-                  >
-                    {service.description}
-                  </Typography>
-                </CardContent>
-              </CustomCard>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </Root>
+          <Typography variant="h6" color="primary">
+            Features
+          </Typography>
+          <SectionTitle
+            variant="h2"
+            fontWeight={"bold"}
+            gutterBottom
+            mt={{ xs: 2, md: 5 }}
+            sx={{
+              textAlign: { xs: "left", md: "left" },
+              fontSize: { xs: "2.5rem", md: "4rem" },
+            }}
+          >
+            What I Do
+          </SectionTitle>
+          <Grid container spacing={4} sx={{ mt: { xs: 2, md: 5 } }}>
+            {services.map((service, index) => (
+              <Grid item xs={12} sm={6} key={index}>
+                <CustomCard title={service.title}>
+                  <IconWrapper>{service.icon}</IconWrapper>
+                  <CardContent>
+                    <Typography variant="h6" fontWeight="bold" marginBottom={1}>
+                      {service.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      textAlign="left"
+                    >
+                      {service.description}
+                    </Typography>
+                  </CardContent>
+                </CustomCard>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Root>
+    </section>
   );
 };
 
