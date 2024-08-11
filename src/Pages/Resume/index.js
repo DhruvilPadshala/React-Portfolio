@@ -133,7 +133,7 @@ const Resume = () => {
         gutterBottom
         align="center"
         sx={{
-          fontSize: { xs: "2rem", md: "3rem" },
+          fontSize: { xs: "2.5rem", md: "4rem" },
           textAlign: "center",
         }}
       >
