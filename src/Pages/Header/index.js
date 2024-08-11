@@ -51,8 +51,6 @@ const Header = () => {
           "Features",
           "Portfolio",
           "Resume",
-          "Clients",
-          "Pricing",
           "Blog",
           "Contact",
         ].map((text, index) => (
@@ -90,8 +88,6 @@ const Header = () => {
                 "Features",
                 "Portfolio",
                 "Resume",
-                "Clients",
-                "Pricing",
                 "Blog",
                 "Contact",
               ].map((link) => (
@@ -112,7 +108,7 @@ const Header = () => {
               color="inherit"
               aria-label="menu"
               onClick={toggleDrawer(true)}
-              sx={{ mr: 2 }}
+              sx={{ mr: 3 }}
             >
               <MenuIcon fontSize="large" />
             </IconButton>
