@@ -8,7 +8,12 @@ const Home = () => {
   return (
     <Container
       className="rn-slider-area"
-      sx={{ p: 4, backgroundColor: "#f0f2f5", mt: { xs: 10, md: 20 } ,height:{xs:"auto",md:"80vh"}}}
+      sx={{
+        p: 4,
+        backgroundColor: "#f0f2f5",
+        mt: { xs: 10, md: 20 },
+        height: { xs: "auto", md: "80vh" },
+      }}
     >
       <Grid container spacing={6} alignItems="center">
         <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
@@ -87,18 +92,16 @@ const Home = () => {
               variant="body1"
               className="description"
               sx={{
-                mt: 2,
+                mt: 3,
                 fontSize: { xs: "1rem", sm: "1rem", md: "1.125rem" },
                 textAlign: { xs: "left", md: "left" },
                 lineHeight: { xs: "1.5", sm: "1.75", md: "2" },
               }}
             >
-              As a B.Tech student in Computer Engineering, I am passionate about
-              web and app development. I have hands-on experience with React,
-              React Native, JavaScript and TypeScript, allowing me to build
-              robust and user-friendly applications. I'm always open to
-              connecting with like-minded professionals, discussing potential
-              opportunities, or simply exchanging ideas.
+              B.Tech student in Computer Engineering, passionate about web and
+              app development. I specialize in React,Next and React Native,
+              building user-friendly applications that turn ideas into impactful
+              digital experiences.
             </Typography>
           </Box>
           <SocialsSection />
