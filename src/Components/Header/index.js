@@ -9,12 +9,12 @@ import {
   Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import "../../../src/App.css";
 import logo from "../../assets/Logo/Dhruvil-modified.png";
 import { Facebook, Instagram, LinkedIn } from "../Home/index4";
 import { navLinksdata } from "../../Constant/index";
-import { scroller } from 'react-scroll';
-
+import { scroller } from "react-scroll";
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -34,9 +34,10 @@ const Header = () => {
     scroller.scrollTo(link, {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart',
+      smooth: "easeInOutQuart",
     });
     setActiveLink(`#${link}`);
+    setDrawerOpen(false);
   };
 
   const drawerContent = (
@@ -49,9 +50,21 @@ const Header = () => {
         height: "100vh",
       }}
     >
-      <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
-        <img src={logo} alt="Dhruvil" width={50} height={50} />
-      </Typography>
+        <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          mb: 2, // Margin bottom to add space between the header and the list
+        }}
+      >
+        <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
+          <img src={logo} alt="Dhruvil" width={50} height={50} />
+        </Typography>
+        <IconButton onClick={toggleDrawer(false)} sx={{ color: "text.primary" }}>
+          <CloseIcon fontSize="large" />
+        </IconButton>
+      </Box>
       <List>
         {navLinksdata.map((item) => (
           <ListItem
