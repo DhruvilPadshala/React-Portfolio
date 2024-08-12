@@ -16,11 +16,11 @@ const Footer = () => {
   };
 
   const handleHover = (event) => {
-    event.target.style.color = "#ddd"; // Optional: Change color on hover
+    event.target.style.color = "#ddd"; 
   };
 
   const handleLeave = (event) => {
-    event.target.style.color = "#fff"; // Reset to original color
+    event.target.style.color = "#fff"; 
   };
 
   return (

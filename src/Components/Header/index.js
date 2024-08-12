@@ -13,6 +13,8 @@ import "../../../src/App.css";
 import logo from "../../assets/Logo/Dhruvil-modified.png";
 import { Facebook, Instagram, LinkedIn } from "../Home/index4";
 import { navLinksdata } from "../../Constant/index";
+import { scroller } from 'react-scroll';
+
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -29,7 +31,12 @@ const Header = () => {
   };
 
   const handleLinkClick = (link) => {
-    setActiveLink(link);
+    scroller.scrollTo(link, {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+    });
+    setActiveLink(`#${link}`);
   };
 
   const drawerContent = (
@@ -50,7 +57,7 @@ const Header = () => {
           <ListItem
             button
             key={item._id}
-            onClick={() => handleLinkClick(`#${item.link}`)}
+            onClick={() => handleLinkClick(item.link)}
           >
             <ListItemText primary={item.title} />
           </ListItem>
@@ -87,7 +94,7 @@ const Header = () => {
                     className={
                       activeLink === `#${item.link}` ? "active" : "inactive"
                     }
-                    onClick={() => handleLinkClick(`#${item.link}`)}
+                    onClick={() => handleLinkClick(item.link)}
                   >
                     {item.title}
                   </a>
