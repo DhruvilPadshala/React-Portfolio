@@ -21,6 +21,9 @@ const Contact = () => {
         mt: { xs: 3, md: 3 },
       }}
     >
+    <Typography variant="h5" color="primary" sx={{ mb: 5 }}>
+        Contact
+    </Typography>
       <Typography
         variant="h3"
         align="center"
