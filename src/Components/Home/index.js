@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Box, Typography, Grid } from "@mui/material";
 import profilePic from "../../assets/Home/Dhruvil.jpg";
 import AlternatingText from "./index2";
 import SocialsSection from "./index3";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = 'Dhruvil';
+  }, []);
   return (
     <section id="home">
       <Container

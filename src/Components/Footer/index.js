@@ -74,7 +74,7 @@ const Footer = () => {
                 </Link>
                 <br />
                 <Link
-                  href="#"
+                  href="#features"
                   sx={linkStyle}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
@@ -83,7 +83,7 @@ const Footer = () => {
                 </Link>
                 <br />
                 <Link
-                  href="#"
+                  href="#portfolio"
                   sx={linkStyle}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
@@ -92,7 +92,7 @@ const Footer = () => {
                 </Link>
                 <br />
                 <Link
-                  href="#"
+                  href="#resume"
                   sx={linkStyle}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
@@ -101,7 +101,7 @@ const Footer = () => {
                 </Link>
                 <br />
                 <Link
-                  href="#"
+                  href="#blog"
                   sx={linkStyle}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
@@ -110,7 +110,7 @@ const Footer = () => {
                 </Link>
                 <br />
                 <Link
-                  href="#"
+                  href="#contact"
                   sx={linkStyle}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}

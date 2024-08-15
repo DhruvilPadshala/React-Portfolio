@@ -113,7 +113,6 @@ const Resume = () => {
 
   return (
     <section id="resume">
-      {" "}
       <Box
         sx={{
           flexGrow: 1,
@@ -128,6 +127,9 @@ const Resume = () => {
           mt: { xs: 3, md: 3 },
         }}
       >
+      <Typography variant="h5" color="primary" sx={{ mb: 5 }}>
+        Resume
+      </Typography>
         <Typography
           variant="h2"
           component="h2"

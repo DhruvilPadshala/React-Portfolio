@@ -64,6 +64,9 @@ const Portfolio = () => {
           margin: "0 auto",
         }}
       >
+        <Typography variant="h5" color="primary" sx={{ mb: 5 }}>
+          Portfolio
+        </Typography>
         <Typography
           variant="h2"
           component="h2"
