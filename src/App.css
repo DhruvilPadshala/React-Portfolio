@@ -49,15 +49,15 @@
 }
 
 .desktop-menu a:hover {
-  color: #555; /* Hover color */
+  color: #007bff; /* Hover color */
 }
 
 .desktop-menu .active {
-  color: black; /* Active link color */
+  color: #007bff; /* Active link color */
 }
 
 .desktop-menu .inactive {
-  color: #555; /* Inactive link color */
+  color:black; /* Inactive link color */
 }
 
 a {

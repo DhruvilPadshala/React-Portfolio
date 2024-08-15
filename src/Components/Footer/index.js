@@ -1,26 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Container,
   Grid,
   Typography,
-  Link,
+  Link as MuiLink,
   IconButton,
 } from "@mui/material";
 import { LinkedIn, YouTube, Facebook, Instagram } from "@mui/icons-material";
+import { Link as ScrollLink, scroller } from "react-scroll";
 
 const Footer = () => {
+  const [activeLink, setActiveLink] = useState("");
+
   const linkStyle = {
     color: "#fff",
     textDecoration: "none",
+    cursor: "pointer",
   };
 
   const handleHover = (event) => {
-    event.target.style.color = "#ddd"; 
+    event.target.style.color = "blue"; 
   };
 
   const handleLeave = (event) => {
     event.target.style.color = "#fff"; 
+  };
+
+  const handleLinkClick = (link) => {
+    scroller.scrollTo(link, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+    setActiveLink(`#${link}`);
   };
 
   return (
@@ -64,59 +77,83 @@ const Footer = () => {
             <Grid item xs={12} md={3}>
               <Typography variant="h6">Links</Typography>
               <Typography variant="body2" sx={{ mt: 1 }}>
-                <Link
-                  href="#"
-                  sx={linkStyle}
+                <ScrollLink
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  duration={800}
+                  style={linkStyle}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
+                  onClick={() => handleLinkClick("home")}
                 >
                   Home
-                </Link>
+                </ScrollLink>
                 <br />
-                <Link
-                  href="#features"
-                  sx={linkStyle}
+                <ScrollLink
+                  to="features"
+                  spy={true}
+                  smooth={true}
+                  duration={800}
+                  style={linkStyle}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
+                  onClick={() => handleLinkClick("features")}
                 >
                   Features
-                </Link>
+                </ScrollLink>
                 <br />
-                <Link
-                  href="#portfolio"
-                  sx={linkStyle}
+                <ScrollLink
+                  to="portfolio"
+                  spy={true}
+                  smooth={true}
+                  duration={800}
+                  style={linkStyle}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
+                  onClick={() => handleLinkClick("portfolio")}
                 >
                   Portfolio
-                </Link>
+                </ScrollLink>
                 <br />
-                <Link
-                  href="#resume"
-                  sx={linkStyle}
+                <ScrollLink
+                  to="resume"
+                  spy={true}
+                  smooth={true}
+                  duration={800}
+                  style={linkStyle}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
+                  onClick={() => handleLinkClick("resume")}
                 >
                   Resume
-                </Link>
+                </ScrollLink>
                 <br />
-                <Link
-                  href="#blog"
-                  sx={linkStyle}
+                <ScrollLink
+                  to="blog"
+                  spy={true}
+                  smooth={true}
+                  duration={800}
+                  style={linkStyle}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
+                  onClick={() => handleLinkClick("blog")}
                 >
                   Blog
-                </Link>
+                </ScrollLink>
                 <br />
-                <Link
-                  href="#contact"
-                  sx={linkStyle}
+                <ScrollLink
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  duration={800}
+                  style={linkStyle}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
+                  onClick={() => handleLinkClick("contact")}
                 >
                   Contact
-                </Link>
+                </ScrollLink>
               </Typography>
             </Grid>
           </Grid>
@@ -138,22 +175,22 @@ const Footer = () => {
             &copy; All rights reserved.
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
-            <Link
+            <MuiLink
               href="#"
               sx={linkStyle}
               onMouseEnter={handleHover}
               onMouseLeave={handleLeave}
             >
               Terms of Use
-            </Link>
-            <Link
+            </MuiLink>
+            <MuiLink
               href="#"
               sx={linkStyle}
               onMouseEnter={handleHover}
               onMouseLeave={handleLeave}
             >
               Privacy Policy
-            </Link>
+            </MuiLink>
           </Box>
         </Container>
       </Box>

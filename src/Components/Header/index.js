@@ -50,7 +50,7 @@ const Header = () => {
         height: "100vh",
       }}
     >
-        <Box
+      <Box
         sx={{
           display: "flex",
           justifyContent: "space-between",
@@ -61,7 +61,10 @@ const Header = () => {
         <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
           <img src={logo} alt="Dhruvil" width={50} height={50} />
         </Typography>
-        <IconButton onClick={toggleDrawer(false)} sx={{ color: "text.primary" }}>
+        <IconButton
+          onClick={toggleDrawer(false)}
+          sx={{ color: "text.primary" }}
+        >
           <CloseIcon fontSize="large" />
         </IconButton>
       </Box>
@@ -108,6 +111,11 @@ const Header = () => {
                       activeLink === `#${item.link}` ? "active" : "inactive"
                     }
                     onClick={() => handleLinkClick(item.link)}
+                    sx={{
+                      "&:hover": {
+                        color: "#007bff",
+                      },
+                    }}
                   >
                     {item.title}
                   </a>
