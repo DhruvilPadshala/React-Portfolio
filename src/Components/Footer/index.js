@@ -10,11 +10,11 @@ import {
 import { LinkedIn, YouTube, Facebook, Instagram } from "@mui/icons-material";
 import { Link as ScrollLink, scroller } from "react-scroll";
 
-const Footer = () => {
+const Footer = (link) => {
   const [activeLink, setActiveLink] = useState("");
 
   const linkStyle = {
-    color: "#fff",
+    color: activeLink === `#${link}` ? "blue" : "#fff",
     textDecoration: "none",
     cursor: "pointer",
   };
