@@ -11,28 +11,22 @@ import {
 const blogs = [
   {
     id: 1,
-    title: "T-shirt design is the part of design",
-    category: "Canada",
-    timeToRead: "2 min read",
-    image:
-      "https://cdn.vectorstock.com/i/500p/92/00/emblem-with-eagle-vector-4119200.jpg",
+    title: " web developers and designers are constantly in search of new sources of knowledge and inspiration. Here is a list of the top ten blogs of 2024 that every professional in the field of web development should regularly visit.",
+    category: "Web Devlopment",
+    image:"https://media.licdn.com/dms/image/v2/D4D12AQECVPPBt_r_jQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1705309055416?e=1729728000&v=beta&t=7TMITaJI7oi7oBdpqIHKR6G1zTuaN983Zklb3ZYUh10"
   },
   {
     id: 2,
-    title: "The services provide for design",
-    category: "Development",
-    timeToRead: "2 hour read",
-    image:
-      "https://cdn.vectorstock.com/i/500p/92/00/emblem-with-eagle-vector-4119200.jpg",
+    title: "Mastering mobile app development in 2024 demands a structured approach, from ideation to deployment. Adapting to evolving tools, trends, and consumer expectations ensures your app stands out and delivers value.",
+    category: "App Development",
+    image:"https://buildfire.com/wp-content/uploads/2024/02/social-app-scaled.jpg"
   },
   {
     id: 3,
-    title: "Mobile app landing design & app maintain",
-    category: "Application",
-    timeToRead: "5 min read",
-    image:
-      "https://cdn.vectorstock.com/i/500p/92/00/emblem-with-eagle-vector-4119200.jpg",
-  },
+    title: "All-in-one platform for marketing, sales, and customer service. Features automation and detailed reporting. Streamlines business processes. Supports project management and organization. Versatile for personal and team use.",
+    category: "Software Development",
+    image:"https://acropolium.com/img/articles/saas-application-development-2022/img01.jpg"
+  }
 ];
 
 const Blog = () => {
@@ -41,12 +35,11 @@ const Blog = () => {
       <Box
         sx={{
           flexGrow: 1,
-          height: "100vh",
           p: 3,
           backgroundColor: "#f0f2f5",
           justifyContent: "center",
           alignItems: "center",
-          width: { xs: "85%", md: "75%" },
+          width: { xs: "95%", md: "75%" },
           margin: "0 auto",
           mt: { xs: 3, md: 3 },
           padding: 2,
@@ -82,7 +75,7 @@ const Blog = () => {
                   image={blog.image}
                   alt={blog.title}
                   sx={{
-                    width: "92%",
+                    width: { xs: "90%", md: "92%" },
                     height: 350,
                     padding: 2.5,
                     borderRadius: 10,
