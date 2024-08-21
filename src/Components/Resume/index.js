@@ -127,9 +127,6 @@ const Resume = () => {
           mt: { xs: 3, md: 3 },
         }}
       >
-      <Typography variant="h5" color="primary" sx={{ mb: 5 }}>
-        Resume
-      </Typography>
         <Typography
           variant="h2"
           component="h2"

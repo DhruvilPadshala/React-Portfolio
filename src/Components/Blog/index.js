@@ -46,14 +46,6 @@ const Blog = () => {
         }}
       >
         <Typography
-          variant="h5"
-          color="primary"
-          align="center"
-          sx={{ mb: 5, alignItems: "center" }}
-        >
-          Visit my blog
-        </Typography>
-        <Typography
           variant="h2"
           component="h2"
           fontWeight={"bold"}

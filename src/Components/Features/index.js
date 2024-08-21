@@ -1,4 +1,4 @@
-  import React from "react";
+import React from "react";
 import {
   Container,
   Grid,
@@ -125,14 +125,11 @@ const Features = () => {
             justifyContent: { xs: "center", md: "flex-start" },
           }}
         >
-          <Typography variant="h6" color="primary">
-            Features
-          </Typography>
           <SectionTitle
             variant="h2"
             fontWeight={"bold"}
             gutterBottom
-            mt={{ xs: 2, md: 5 }}
+            mt={{ xs: 2, md: 2 }}
             sx={{
               textAlign: { xs: "left", md: "left" },
               fontSize: { xs: "2.5rem", md: "4rem" },
