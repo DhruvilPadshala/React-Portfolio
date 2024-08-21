@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   IconButton,
   Drawer,
@@ -42,24 +42,23 @@ const Header = () => {
     setDrawerOpen(false);
   };
 
-  const controlHeader = () => {
+  const controlHeader = useCallback(() => {
     if (window.scrollY > lastScrollY) {
-      // If scrolling down
       setShowHeader(false);
     } else {
-      // If scrolling up
       setShowHeader(true);
     }
     setLastScrollY(window.scrollY);
-  };
-
+  }, [lastScrollY]);
+  
   useEffect(() => {
     window.addEventListener("scroll", controlHeader);
-
+  
     return () => {
       window.removeEventListener("scroll", controlHeader);
     };
-  }, [lastScrollY]);
+  }, [controlHeader]);
+  
 
   const drawerContent = (
     <Box
