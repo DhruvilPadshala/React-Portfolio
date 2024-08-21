@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   IconButton,
   Drawer,
@@ -19,6 +19,8 @@ import { scroller } from "react-scroll";
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("#home");
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -39,6 +41,24 @@ const Header = () => {
     setActiveLink(`#${link}`);
     setDrawerOpen(false);
   };
+
+  const controlHeader = useCallback(() => {
+    if (window.scrollY > lastScrollY) {
+      setShowHeader(false);
+    } else {
+      setShowHeader(true);
+    }
+    setLastScrollY(window.scrollY);
+  }, [lastScrollY]);
+  
+  useEffect(() => {
+    window.addEventListener("scroll", controlHeader);
+  
+    return () => {
+      window.removeEventListener("scroll", controlHeader);
+    };
+  }, [controlHeader]);
+  
 
   const drawerContent = (
     <Box
@@ -95,7 +115,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="header">
+      <header className={`header ${showHeader ? "visible" : "hidden"}`}>
         <div className="logo-container">
           <img src={logo} alt="Dhruvil" width={50} height={50} />
           <div className="logo-text">Dhruvil</div>
