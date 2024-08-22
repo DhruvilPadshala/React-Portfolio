@@ -14,9 +14,10 @@ const Footer = (link) => {
   const [activeLink, setActiveLink] = useState("");
 
   const linkStyle = {
-    color: activeLink === `#${link}` ? "blue" : "#fff",
+    color: activeLink === `#${link}` ? "blue" : "#aaaeaf",
     textDecoration: "none",
     cursor: "pointer",
+
   };
 
   const handleHover = (event) => {
@@ -24,7 +25,7 @@ const Footer = (link) => {
   };
 
   const handleLeave = (event) => {
-    event.target.style.color = "#fff"; 
+    event.target.style.color = "#aaaeaf"; 
   };
 
   const handleLinkClick = (link) => {
@@ -49,10 +50,10 @@ const Footer = (link) => {
         <Container maxWidth={false} sx={{ px: 0 }}>
           <Grid container spacing={4} sx={{ justifyContent: "center" }}>
             <Grid item xs={12} md={3}>
-              <Typography variant="h6" color="primary">
+              <Typography variant="h6" color="#fff">
                 Dhruvil Padshala
               </Typography>
-              <Typography variant="body2" sx={{ mt: 1 }}>
+              <Typography variant="body2" sx={{ mt: 1,color:"#aaaeaf" }}>
                 +91 7016881034
                 <br />
                 padshaladhruvil5@gmail.com
@@ -60,7 +61,7 @@ const Footer = (link) => {
             </Grid>
             <Grid item xs={12} md={3}>
               <Typography variant="h6">Services</Typography>
-              <Typography variant="body2" sx={{ mt: 1 }}>
+              <Typography variant="body2" sx={{ mt: 1,color:"#aaaeaf" }}>
                 Web Development
                 <br />
                 UI/UX Design

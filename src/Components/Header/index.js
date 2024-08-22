@@ -75,7 +75,7 @@ const Header = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          mb: 2, // Margin bottom to add space between the header and the list
+          mb: 2,
         }}
       >
         <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
