@@ -131,7 +131,7 @@ const Features = () => {
             gutterBottom
             mt={{ xs: 2, md: 2 }}
             sx={{
-              textAlign: { xs: "left", md: "left" },
+              textAlign: "center",
               fontSize: { xs: "2.5rem", md: "4rem" },
             }}
           >

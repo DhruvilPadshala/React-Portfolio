@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./Components/Header";
-import Home from "./Components/Home"
+// import Home from "./Components/Home"
+import Home from "./Components/Home2"
 import Features from "./Components/Features"
 import Portfolio from "./Components/Portfolio"
 import Resume from './Components/Resume'

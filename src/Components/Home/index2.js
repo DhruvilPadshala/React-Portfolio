@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const AlternatingText = () => {
-  const words = ["Developer.", "Professional coder", "Programmer."];
+  const words = ["Developer", "Professional coder", "Programmer"];
   const [visibleIndex, setVisibleIndex] = useState(0);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const AlternatingText = () => {
   }, [words.length]);
 
   return (
-    <div className="cd-words-wrapper" style={{ fontWeight: "normal" }}>
+    <div className="cd-words-wrapper" style={{ fontWeight: "normal",color:"white" }}>
       {words.map((word, index) => (
         <b
           key={index}
