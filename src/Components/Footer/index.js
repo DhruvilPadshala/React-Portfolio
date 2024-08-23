@@ -7,7 +7,7 @@ import {
   Link as MuiLink,
   IconButton,
 } from "@mui/material";
-import { LinkedIn, YouTube, Facebook, Instagram } from "@mui/icons-material";
+import { LinkedIn , Facebook, Instagram } from "@mui/icons-material";
 import { Link as ScrollLink, scroller } from "react-scroll";
 
 const Footer = (link) => {
@@ -17,15 +17,14 @@ const Footer = (link) => {
     color: activeLink === `#${link}` ? "blue" : "#aaaeaf",
     textDecoration: "none",
     cursor: "pointer",
-
   };
 
   const handleHover = (event) => {
-    event.target.style.color = "blue"; 
+    event.target.style.color = "blue";
   };
 
   const handleLeave = (event) => {
-    event.target.style.color = "#aaaeaf"; 
+    event.target.style.color = "#aaaeaf";
   };
 
   const handleLinkClick = (link) => {
@@ -53,7 +52,7 @@ const Footer = (link) => {
               <Typography variant="h6" color="#fff">
                 Dhruvil Padshala
               </Typography>
-              <Typography variant="body2" sx={{ mt: 1,color:"#aaaeaf" }}>
+              <Typography variant="body2" sx={{ mt: 1, color: "#aaaeaf" }}>
                 +91 7016881034
                 <br />
                 padshaladhruvil5@gmail.com
@@ -61,7 +60,7 @@ const Footer = (link) => {
             </Grid>
             <Grid item xs={12} md={3}>
               <Typography variant="h6">Services</Typography>
-              <Typography variant="body2" sx={{ mt: 1,color:"#aaaeaf" }}>
+              <Typography variant="body2" sx={{ mt: 1, color: "#aaaeaf" }}>
                 Web Development
                 <br />
                 UI/UX Design
@@ -159,18 +158,33 @@ const Footer = (link) => {
             </Grid>
           </Grid>
           <Box sx={{ mt: 5, textAlign: "center" }}>
-            <IconButton color="inherit">
-              <LinkedIn />
-            </IconButton>
-            <IconButton color="inherit">
-              <Instagram />
-            </IconButton>
-            <IconButton color="inherit">
-              <YouTube />
-            </IconButton>
-            <IconButton color="inherit">
-              <Facebook />
-            </IconButton>
+            <a
+              href="https://www.facebook.com/dhruv.pansala?mibextid=ZbWKwL"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconButton color="inherit">
+                <Facebook color="primary" />
+              </IconButton>
+            </a>
+            <a
+              href="https://www.instagram.com/_unique_boy_211?igsh=MTJyY2UyaWVhdng5bw=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconButton color="inherit">
+                <Instagram color="secondary" />
+              </IconButton>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dhruvil-padshala-032630270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconButton color="inherit">
+                <LinkedIn color="primary" />
+              </IconButton>
+            </a>
           </Box>
           <Typography variant="body2" sx={{ mt: 3, textAlign: "center" }}>
             &copy; All rights reserved.
