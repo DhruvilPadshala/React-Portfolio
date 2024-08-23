@@ -50,7 +50,7 @@ const Home = () => {
             alignItems="center"
             justifyContent="flex-start"
             style={{
-              height: "80vh",
+              height: "80vh", 
               width: "100%",
               textAlign: "left",
               margin: "0 auto",
@@ -81,7 +81,7 @@ const Home = () => {
                 variant="h6"
                 sx={{
                   color: "white",
-                  padding: "10px",
+                  padding: { xs: "0 10px", md: "0" },
                   fontWeight: "normal",
                   textTransform: "uppercase",
                   fontSize: { xs: "1rem", md: "1.2rem" },
