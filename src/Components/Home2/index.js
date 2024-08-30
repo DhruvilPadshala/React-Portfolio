@@ -50,7 +50,7 @@ const Home = () => {
             alignItems="center"
             justifyContent="flex-start"
             style={{
-              height: "80vh", 
+              height: "80vh",
               width: "100%",
               textAlign: "left",
               margin: "0 auto",
@@ -128,6 +128,28 @@ const Home = () => {
                   }}
                 >
                   Contact Me
+                </Button>
+                <Button
+                  variant="outlined"
+                  onClick={() => scrollToSection("portfolio")}
+                  size="medium"
+                  sx={{
+                    borderRadius: "25px",
+                    padding: { xs: "6px 12px", md: "8px 15px" },
+                    textAlign: "left",
+                    fontWeight: "bold",
+                    fontSize: { xs: "1rem", md: "1.2rem" },
+                    textTransform: "uppercase",
+                    color: "white",
+                    border: "2px solid white",
+                    transition: "color 0.3s, border-color 0.3s",
+                    ":hover": {
+                      color: "#0056b3",
+                      borderColor: "#0056b3",
+                    },
+                  }}
+                >
+                  My Portfolio
                 </Button>
               </Box>
             </Grid>

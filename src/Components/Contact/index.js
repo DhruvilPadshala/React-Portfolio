@@ -10,8 +10,8 @@ const Contact = () => {
     <Box
       sx={{
         backgroundColor: "#f0f2f5",
-        p: 3,
-        width: { xs: "85%", md: "75%" },
+        p: { xs: 1, md: 3 },
+        width: { xs: "100%", md: "75%" },
         alignItems: "center",
         justifyContent: "center",
         margin: "0 auto",
@@ -42,7 +42,7 @@ const Contact = () => {
               borderRadius: 2,
               boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
               justifyContent: "center",
-              width: { xs: "100%", md: "80%" },
+              width: { xs: "100%", md: "86%" },
               display: "flex",
               flexDirection: "column",
             }}
@@ -52,7 +52,7 @@ const Contact = () => {
               src={Profile}
               alt="Profile"
               sx={{
-                width: { xs: "88%", md: "90%" },
+                width: { xs: "100%", md: "100%" },
                 height: "auto",
                 padding: 2.5,
                 borderRadius: 2,
@@ -60,7 +60,7 @@ const Contact = () => {
             />
             <Grid ml={2.5}>
               <Typography variant="h5">Dhruvil Padshala</Typography>
-              <Typography variant="subtitle1">Devloper</Typography>
+              <Typography variant="subtitle1">Developer</Typography>
               <Typography variant="body2" paragraph>
                 I am available for freelance work. Connect with me via and call
                 in to my account.
