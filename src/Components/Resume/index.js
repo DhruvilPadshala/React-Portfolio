@@ -116,13 +116,13 @@ const Resume = () => {
       <Box
         sx={{
           flexGrow: 1,
-          p: 2,
+          p: { xs: 1, md: 2 },
           backgroundColor: "#f0f2f5",
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
           flexDirection: "column",
-          width: { xs: "90%", md: "75%" },
+          width: { xs: "100%", md: "75%" },
           margin: "0 auto",
           mt: { xs: 3, md: 3 },
         }}
@@ -145,13 +145,13 @@ const Resume = () => {
           onChange={handleTabChange}
           aria-label="resume tabs"
           className="tabs"
-          TabIndicatorProps={{ style: { display: "none" } }} // Remove bottom line indicator
+          TabIndicatorProps={{ style: { display: "none" } }} 
           sx={{
             mb: 2,
             mt: 3,
             justifyContent: "center",
             alignItems: "center",
-            width: { xs: "100%", md: "75%" },
+            width: { xs: "90%", md: "75%" },
             flexWrap: "wrap",
             "& .MuiTabs-flexContainer": {
               flexDirection: { xs: "column", md: "row" },

@@ -23,7 +23,7 @@ const blogs = [
   },
   {
     id: 3,
-    title: "All-in-one platform for marketing, sales, and customer service. Features automation and detailed reporting. Streamlines business processes. Supports project management and organization. Versatile for personal and team use.",
+    title: "All-in-one platform for marketing, sales, and customer service. Features automation and detailed reporting. Supports project management and organization. Versatile for personal and team use.",
     category: "Software Development",
     image:"https://acropolium.com/img/articles/saas-application-development-2022/img01.jpg"
   }
@@ -35,11 +35,11 @@ const Blog = () => {
       <Box
         sx={{
           flexGrow: 1,
-          p: 3,
+          p: { xs: 1 , md: 3 },
           backgroundColor: "#f0f2f5",
           justifyContent: "center",
           alignItems: "center",
-          width: { xs: "95%", md: "75%" },
+          width: { xs: "100%", md: "75%" },
           margin: "0 auto",
           mt: { xs: 3, md: 3 },
           padding: 2,
@@ -67,7 +67,7 @@ const Blog = () => {
                   image={blog.image}
                   alt={blog.title}
                   sx={{
-                    width: { xs: "90%", md: "92%" },
+                    width: "100%",
                     height: 350,
                     padding: 2.5,
                     borderRadius: 10,

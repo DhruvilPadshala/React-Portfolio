@@ -11,6 +11,7 @@ import { styled } from "@mui/material/styles";
 import BusinessIcon from "@mui/icons-material/Business";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import TvIcon from "@mui/icons-material/Tv";
+import PhonelinkIcon from '@mui/icons-material/Phonelink';
 import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 import CallToActionIcon from "@mui/icons-material/CallToAction";
 import WysiwygIcon from "@mui/icons-material/Wysiwyg";
@@ -35,8 +36,8 @@ const SectionTitle = styled(Typography)(({ theme }) => ({
 
 const CustomCard = styled(Card)(({ theme, title }) => ({
   display: "flex",
-  width: "530px",
-  height: "250px",
+  width: "570px",
+  height: "260px",
   backgroundColor: "#f0f2f5",
   flexDirection: "column",
   justifyContent: "center",
@@ -57,7 +58,7 @@ const CustomCard = styled(Card)(({ theme, title }) => ({
   },
   [theme.breakpoints.down("sm")]: {
     height: "auto",
-    width: "auto",
+    width: "100%",
     padding: theme.spacing(1),
   },
 }));
@@ -88,6 +89,11 @@ const services = [
     title: "IT Consulting",
     description:
       "Our team delivers tailored technology strategies and support to drive innovation and efficiency. Let us help you navigate complex IT challenges and achieve your goals seamlessly.",
+  },
+  {
+    icon: <PhonelinkIcon fontSize="large" />,
+    title: "Responsive Design",
+    description:"Responsive design ensures a website or app looks great on all devices by adapting layout and content to different screen sizes. It enhances usability and accessibility for a seamless user experience."
   },
   {
     icon: <TvIcon fontSize="large" />,

@@ -6,11 +6,11 @@ const ContactForm = () => {
     <Box
       sx={{
         backgroundColor: "#f0f2f5",
-        padding: "2rem",
+        padding: { xs: 2, md: 4 },
         borderRadius: 2,
         boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
-        maxWidth: { xs: "100%", md: "52%" },
-        height: { xs: "auto", md: "685px" },
+        maxWidth: { xs: "100%", md: "58%" },
+        height: { xs: "auto", md: "775px" },
         marginTop: "1.5rem",
         flexGrow: 1,
         ml: { xs: 2.5, md: 0 },

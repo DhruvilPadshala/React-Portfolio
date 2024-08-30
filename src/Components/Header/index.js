@@ -148,7 +148,6 @@ const Header = () => {
               color="inherit"
               aria-label="menu"
               onClick={toggleDrawer(true)}
-              sx={{ mr: 3 }}
             >
               <MenuIcon fontSize="large" />
             </IconButton>
