@@ -88,7 +88,7 @@ const Home = () => {
                   maxWidth: "700px",
                   lineHeight: 1.4,
                   textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-                  animation: `${fadeIn} 1s ease-out 0.5s`,
+                  animation: `${fadeIn} 1s ease-out `,
                   marginBottom: { xs: "40px", md: "50px" },
                   textAlign: "left",
                 }}
@@ -119,6 +119,7 @@ const Home = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" },
                     textTransform: "uppercase",
                     color: "white",
+                    animation: `${fadeIn} 1s ease-out `,
                     border: "2px solid white",
                     transition: "color 0.3s, border-color 0.3s",
                     ":hover": {
@@ -141,6 +142,7 @@ const Home = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" },
                     textTransform: "uppercase",
                     color: "white",
+                    animation: `${fadeIn} 1s ease-out `,
                     border: "2px solid white",
                     transition: "color 0.3s, border-color 0.3s",
                     ":hover": {

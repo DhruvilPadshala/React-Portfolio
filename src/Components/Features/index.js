@@ -36,8 +36,8 @@ const SectionTitle = styled(Typography)(({ theme }) => ({
 
 const CustomCard = styled(Card)(({ theme, title }) => ({
   display: "flex",
-  width: "570px",
-  height: "260px",
+  width: "100%",
+  height: "auto",
   backgroundColor: "#f0f2f5",
   flexDirection: "column",
   justifyContent: "center",
