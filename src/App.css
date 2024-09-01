@@ -295,3 +295,13 @@ a:hover::after {
     height: auto;
   }
 }
+/* ScrollToTop.css */
+
+.scroll-to-top-button {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.scroll-to-top-button:hover {
+  opacity: 0.8;
+  transform: translateY(-3px);
+}

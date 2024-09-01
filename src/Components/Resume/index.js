@@ -154,7 +154,7 @@ const Resume = () => {
             width: { xs: "90%", md: "75%" },
             flexWrap: "wrap",
             "& .MuiTabs-flexContainer": {
-              flexDirection: { xs: "column", md: "row" },
+              flexDirection: { xs: "column",sm: "row", md: "row" }, 
             },
             "& .MuiTab-root": {
               textAlign: "center",
@@ -190,7 +190,7 @@ const Resume = () => {
               </Typography>
               <Card
                 sx={{
-                  height: { xs: "auto", md: "280px" },
+                  height: { xs: "auto", md: "85%" },
                   width: { xs: "auto", md: "90%" },
                   backgroundColor: "#f0f2f5",
                   transition: "background-color 0.3s, color 0.3s",
