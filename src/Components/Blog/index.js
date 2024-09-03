@@ -11,22 +11,28 @@ import {
 const blogs = [
   {
     id: 1,
-    title: " web developers and designers are constantly in search of new sources of knowledge and inspiration. Here is a list of the top ten blogs of 2024 that every professional in the field of web development should regularly visit.",
+    title:
+      " web developers and designers are constantly in search of new sources of knowledge and inspiration. Here is a list of the top ten blogs of 2024 that every professional in the field of web development should regularly visit.",
     category: "Web Devlopment",
-    image:"https://media.licdn.com/dms/image/v2/D4D12AQECVPPBt_r_jQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1705309055416?e=1729728000&v=beta&t=7TMITaJI7oi7oBdpqIHKR6G1zTuaN983Zklb3ZYUh10"
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D12AQECVPPBt_r_jQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1705309055416?e=1729728000&v=beta&t=7TMITaJI7oi7oBdpqIHKR6G1zTuaN983Zklb3ZYUh10",
   },
   {
     id: 2,
-    title: "Mastering mobile app development in 2024 demands a structured approach, from ideation to deployment. Adapting to evolving tools, trends, and consumer expectations ensures your app stands out and delivers value.",
+    title:
+      "Mastering mobile app development in 2024 demands a structured approach, from ideation to deployment. Adapting to evolving tools, trends, and consumer expectations ensures your app stands out and delivers value.",
     category: "App Development",
-    image:"https://buildfire.com/wp-content/uploads/2024/02/social-app-scaled.jpg"
+    image:
+      "https://buildfire.com/wp-content/uploads/2024/02/social-app-scaled.jpg",
   },
   {
     id: 3,
-    title: "All-in-one platform for marketing, sales, and customer service. Features automation and detailed reporting. Supports project management and organization. Versatile for personal and team use.",
+    title:
+      "All-in-one platform for marketing, sales, and customer service. Features automation and detailed reporting. Supports project management and organization. Versatile for personal and team use.",
     category: "Software Development",
-    image:"https://acropolium.com/img/articles/saas-application-development-2022/img01.jpg"
-  }
+    image:
+      "https://acropolium.com/img/articles/saas-application-development-2022/img01.jpg",
+  },
 ];
 
 const Blog = () => {
@@ -35,7 +41,7 @@ const Blog = () => {
       <Box
         sx={{
           flexGrow: 1,
-          p: { xs: 1 , md: 3 },
+          p: { xs: 1, md: 3 },
           backgroundColor: "#f0f2f5",
           justifyContent: "center",
           alignItems: "center",
@@ -61,7 +67,14 @@ const Blog = () => {
         <Grid container spacing={3} justifyContent="center">
           {blogs.map((blog) => (
             <Grid item xs={12} sm={6} md={4} key={blog.id}>
-              <Card sx={{ borderRadius: "20px", boxShadow: 3,alignItems: "center",backgroundColor: "#f0f2f5" }}>
+              <Card
+                sx={{
+                  borderRadius: "20px",
+                  boxShadow: 3,
+                  alignItems: "center",
+                  backgroundColor: "#f0f2f5",
+                }}
+              >
                 <CardMedia
                   component="img"
                   image={blog.image}
@@ -82,11 +95,26 @@ const Blog = () => {
                   <Typography
                     variant="overline"
                     color="primary"
-                    sx={{ fontWeight: "bold" }}
+                    sx={{
+                      fontWeight: "bold",
+                      fontSize: {
+                        xs: "0.8rem", // font size for mobile devices
+                        sm: "1rem", // font size for small screens
+                      },
+                    }}
                   >
                     {blog.category.toUpperCase()}
                   </Typography>
-                  <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: "bold",
+                      fontSize: {
+                        xs: "1.2rem", // font size for mobile devices
+                        sm: "1.25rem", // font size for small screens
+                      },
+                    }}
+                  >
                     {blog.title}
                   </Typography>
                   <Box
