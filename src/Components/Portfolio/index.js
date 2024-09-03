@@ -19,13 +19,14 @@ const portfolioItems = [
   {
     title: "Mobile app landing design & maintain",
     category: "App Development",
-    image: "https://cdn.dribbble.com/userupload/11178408/file/original-83f9867761fab663e204ceb725f2a2d4.png?resize=1024x774&vertical=center",
+    image:
+      "https://cdn.dribbble.com/userupload/11178408/file/original-83f9867761fab663e204ceb725f2a2d4.png?resize=1024x774&vertical=center",
   },
   {
     title: "E-commerce Web Development & Optimization",
     category: "E-commerce",
     image: Portfolio3,
-  }
+  },
 ];
 
 const Portfolio = () => {
@@ -72,11 +73,11 @@ const Portfolio = () => {
               >
                 <CardMedia
                   component="img"
-                  height="300"
                   image={item.image}
                   alt={item.title}
                   sx={{
                     borderRadius: 5,
+                    height: { xs: "70%", md: "70%" },
                     transition:
                       "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
                     "&:hover": {
@@ -85,10 +86,24 @@ const Portfolio = () => {
                   }}
                 />
                 <CardContent sx={{ flexGrow: 1, textAlign: "center" }}>
-                  <Typography variant="body2" color="blue" component="p" sx={{ mb: 1 }}>
+                  <Typography
+                    variant="body2"
+                    color="blue"
+                    component="p"
+                    sx={{ mb: 1 }}
+                  >
                     {item.category.toUpperCase()}
                   </Typography>
-                  <Typography variant="h5" component="h3">
+                  <Typography
+                    variant="h5"
+                    component="h5"
+                    sx={{
+                      fontSize: {
+                        xs: "1.2rem", // font size for mobile devices
+                        sm: "1.25rem", // font size for small screens
+                      },
+                    }}
+                  >
                     {item.title}
                   </Typography>
                 </CardContent>

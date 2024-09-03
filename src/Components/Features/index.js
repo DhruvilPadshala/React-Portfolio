@@ -18,7 +18,7 @@ import WysiwygIcon from "@mui/icons-material/Wysiwyg";
 
 const Root = styled(Box)(({ theme }) => ({
   backgroundColor: "#f0f2f5",
-  minHeight: "100vh",
+  minHeight: "auto",
   padding: theme.spacing(5),
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(2),
