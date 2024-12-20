@@ -1,13 +1,6 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-  Link as MuiLink,
-  IconButton,
-} from "@mui/material";
-import { LinkedIn , Facebook, Instagram } from "@mui/icons-material";
+import { Box, Container, Grid, Typography, IconButton } from "@mui/material";
+import { LinkedIn, Facebook, Instagram } from "@mui/icons-material";
 import { Link as ScrollLink, scroller } from "react-scroll";
 
 const Footer = (link) => {
@@ -186,7 +179,7 @@ const Footer = (link) => {
               </IconButton>
             </a>
           </Box>
-          <Typography variant="body2" sx={{ mt: 3, textAlign: "center" }}>
+          {/* <Typography variant="body2" sx={{ mt: 3, textAlign: "center" }}>
             &copy; All rights reserved.
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
@@ -206,7 +199,7 @@ const Footer = (link) => {
             >
               Privacy Policy
             </MuiLink>
-          </Box>
+          </Box> */}
         </Container>
       </Box>
     </section>

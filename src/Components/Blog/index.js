@@ -15,7 +15,9 @@ const blogs = [
       " web developers and designers are constantly in search of new sources of knowledge and inspiration. Here is a list of the top ten blogs of 2024 that every professional in the field of web development should regularly visit.",
     category: "Web Devlopment",
     image:
-      "https://media.licdn.com/dms/image/v2/D4D12AQECVPPBt_r_jQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1705309055416?e=1729728000&v=beta&t=7TMITaJI7oi7oBdpqIHKR6G1zTuaN983Zklb3ZYUh10",
+      // "https://www.cssoftsolutions.com/wp-content/uploads/2024/01/Best-Web-Development.jpg",
+      // "https://admin.12grids.com/uploads/blogs/original_cover_images/Webp//14_Web_Development_Trends_12Grids.webp",
+      "https://atlasiko.com/assets/blog/website-design.jpg",
   },
   {
     id: 2,
