@@ -29,14 +29,17 @@ const ContactForm = () => {
   };
 
   const validatePhoneNumber = (phone) => {
-    const phoneRegex = /^[0-9]{10}$/; 
+    const phoneRegex = /^[0-9]{10}$/;
     return phoneRegex.test(phone);
   };
-  
+
+  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     let valid = true;
     let errorObj = {};
 
@@ -64,29 +67,22 @@ const ContactForm = () => {
       return;
     }
 
-    emailjs
-      .send(
-        "service_rmibzeo",
-        "template_vdihwxa",
-        formData,
-        "ecPhCR6s1UO4IRUlj"
-      )
-      .then(
-        (response) => {
-          setStatusMessage("Your message has been sent successfully!");
-          setFormData({
-            name: "",
-            phone: "",
-            email: "",
-            subject: "",
-            message: "",
-          });
-          setError({});
-        },
-        (error) => {
-          setStatusMessage("Failed to send your message. Please try again.");
-        }
-      );
+    emailjs.send(serviceId, templateId, formData, publicKey).then(
+      (response) => {
+        setStatusMessage("Your message has been sent successfully!");
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        setError({});
+      },
+      (error) => {
+        setStatusMessage("Failed to send your message. Please try again.");
+      }
+    );
   };
 
   return (
@@ -142,17 +138,16 @@ const ContactForm = () => {
       {/* Status Message */}
       {statusMessage && (
         <Typography
-        variant="body2"
-        sx={{
-          mt: 2,
-          textAlign: "center",
-          color: statusMessage.includes("successfully") ? "green" : "red",
-          fontWeight: "bold",
-        }}
-      >
-        {statusMessage}
-      </Typography>
-      
+          variant="body2"
+          sx={{
+            mt: 2,
+            textAlign: "center",
+            color: statusMessage.includes("successfully") ? "green" : "red",
+            fontWeight: "bold",
+          }}
+        >
+          {statusMessage}
+        </Typography>
       )}
       {/* Submit Button */}
       <Box
