@@ -7,25 +7,29 @@ import {
   Typography,
   Box,
 } from "@mui/material";
-import Portfolio1 from "../../assets/Portfolio/portfolio.jpg";
-import Portfolio3 from "../../assets/Portfolio/E-commerce.png";
+import Portfolio1 from "../../assets/Portfolio/portfolio.png";
+import App from "../../assets/Portfolio/gate-pass-modified.png";
+import admin from "../../assets/Portfolio/admin.png";
+import GatePassProjectDetails from "../gate-pass";
 
 const portfolioItems = [
   {
-    title: "The services provide for Portfolio web development",
+    title: "Portfolio web development",
     category: " web Development",
     image: Portfolio1,
+    onclick: () => <GatePassProjectDetails />,
   },
   {
     title: "Mobile app landing design & maintain",
     category: "App Development",
-    image:
-      "https://cdn.dribbble.com/userupload/11178408/file/original-83f9867761fab663e204ceb725f2a2d4.png?resize=1024x774&vertical=center",
+    image: App,
+    onclick: () => <GatePassProjectDetails />,
   },
   {
-    title: "E-commerce Web Development & Optimization",
-    category: "E-commerce",
-    image: Portfolio3,
+    title: "Gate pass management system",
+    category: "Admin panel",
+    image: admin,
+    onclick: () => <GatePassProjectDetails />,
   },
 ];
 
@@ -75,9 +79,10 @@ const Portfolio = () => {
                   component="img"
                   image={item.image}
                   alt={item.title}
+                  // onClick={item.onclick}
                   sx={{
                     borderRadius: 5,
-                    height: { xs: "70%", md: "70%" },
+                    height: { xs: "70%", md: "80%" },
                     transition:
                       "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
                     "&:hover": {
