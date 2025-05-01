@@ -1,124 +1,188 @@
 import React from "react";
 import {
-  Grid,
+  Box,
+  Button,
   Card,
+  CardActions,
   CardContent,
   CardMedia,
+  Chip,
+  Grid,
   Typography,
-  Box,
 } from "@mui/material";
 import Portfolio1 from "../../assets/Portfolio/portfolio.png";
-import App from "../../assets/Portfolio/gate-pass-modified.png";
+import App from "../../assets/Portfolio/gate-pass.png";
 import admin from "../../assets/Portfolio/admin.png";
-import GatePassProjectDetails from "../gate-pass";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
-const portfolioItems = [
+const projects = [
   {
-    title: "Portfolio web development",
-    category: " web Development",
+    id: 1,
+    title: "Developer Portfolio Website",
+    description:
+      "A sleek and professional personal portfolio website designed to showcase my skills, projects, and services. The site highlights my experience and expertise through a clean and modern design.   It provides a user-friendly interface for visitors to easily navigate through my work.",
     image: Portfolio1,
-    onclick: () => <GatePassProjectDetails />,
+    tags: [
+      "React",
+      "Material UI",
+      "Tailwind CSS",
+      "React Router Dom",
+      "Email.JS",
+    ],
+    demoUrl: "/",
+    githubUrl: "https://github.com/DhruvilPadshala/React-Portfolio",
+    newPageUrl: "/new-page-1",
   },
   {
-    title: "Mobile app landing design & maintain",
-    category: "App Development",
+    id: 2,
+    title: "Mobile App Development",
+    description:
+      "A user-friendly mobile interface designed to help users manage daily tasks and track productivity.",
     image: App,
-    onclick: () => <GatePassProjectDetails />,
+    tags: [
+      "React-Native",
+      "React Native Paper",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+    demoUrl: "",
+    githubUrl: "https://github.com/DhruvilPadshala/Gate-Pass-App",
   },
   {
-    title: "Gate pass management system",
-    category: "Admin panel",
+    id: 3,
+    title: "Gate Pass Management System",
+    description:
+      "A secure platform that simplifies and monitors gate pass requests within an organization.",
     image: admin,
-    onclick: () => <GatePassProjectDetails />,
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Shadcn/ui",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+    demoUrl: "https://dhruvil-gate-pass.vercel.app/",
+    githubUrl: "https://github.com/dhruvilshah884/gate-pass-admin-panel",
   },
 ];
 
-const Portfolio = () => {
+export default function Portfolio() {
   return (
     <section id="portfolio">
-      <Box
-        sx={{
-          backgroundColor: "#f0f2f5",
-          flexGrow: 1,
-          mt: { xs: 3, md: 3 },
-          padding: { xs: 1, md: 2 },
-          justifyContent: "center",
-          alignItems: "center",
-          display: "flex",
-          flexDirection: "column",
-          width: { xs: "100%", md: "75%" },
-          margin: "0 auto",
-        }}
-      >
-        <Typography
-          variant="h2"
-          component="h2"
-          fontWeight={"bold"}
-          gutterBottom
-          align="center"
-          sx={{
-            fontSize: { xs: "2.5rem", md: "4rem" },
-            textAlign: "center",
-          }}
-        >
-          My Portfolio
-        </Typography>
-        <Grid container spacing={4} justifyContent="center" sx={{ mt: 2 }}>
-          {portfolioItems.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <Card
-                sx={{
-                  maxWidth: "100%",
-                  height: "100%",
-                  padding: 2.5,
-                  borderRadius: 5,
-                  backgroundColor: "#f0f2f5",
-                }}
+      <div>
+        <Box sx={{ py: 8, px: 2 }}>
+          <Box sx={{ textAlign: "center", mb: 6 }}>
+            <Typography
+              variant="h2"
+              component="h2"
+              fontWeight={"bold"}
+              gutterBottom
+              align="center"
+              sx={{
+                fontSize: { xs: "2.5rem", md: "4rem" },
+                textAlign: "center",
+              }}
+            >
+              My Portfolio
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              color="text.secondary"
+              maxWidth="600px"
+              mx="auto"
+            >
+              Explore my recent projects and see how I can help bring your ideas
+              to life.
+            </Typography>
+          </Box>
+
+          <Grid
+            container
+            spacing={4}
+            justifyContent="center"
+            sx={{ width: "90%", margin: "0 auto", backgroundColor: "#f0f2f5" }}
+          >
+            {projects.map((project) => (
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                key={project.id}
+                className="flex justify-center items-center"
               >
-                <CardMedia
-                  component="img"
-                  image={item.image}
-                  alt={item.title}
-                  // onClick={item.onclick}
+                <Card
+                  elevation={3}
                   sx={{
-                    borderRadius: 5,
-                    height: { xs: "70%", md: "80%" },
-                    transition:
-                      "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+                    transition: "transform 0.3s",
                     "&:hover": {
-                      transform: "scale(1.05)",
+                      transform: "scale(1.02)",
                     },
+                    backgroundColor: "#f0f2f5",
+                    height: 600,
+                    borderRadius: 5,
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                   }}
-                />
-                <CardContent sx={{ flexGrow: 1, textAlign: "center" }}>
-                  <Typography
-                    variant="body2"
-                    color="blue"
-                    component="p"
-                    sx={{ mb: 1 }}
-                  >
-                    {item.category.toUpperCase()}
-                  </Typography>
-                  <Typography
-                    variant="h5"
-                    component="h5"
+                >
+                  <CardMedia
+                    component="img"
+                    height="350"
+                    image={project.image}
+                    alt={project.title}
+                  />
+                  <CardContent className="w-[90%] mx-auto">
+                    <Typography variant="h6" gutterBottom>
+                      {project.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" mb={2}>
+                      {project.description}
+                    </Typography>
+                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
+                      {project.tags.map((tag) => (
+                        <Chip
+                          key={tag}
+                          label={tag}
+                          color="primary"
+                          variant="outlined"
+                        />
+                      ))}
+                    </Box>
+                  </CardContent>
+                  <CardActions
                     sx={{
-                      fontSize: {
-                        xs: "1.2rem", // font size for mobile devices
-                        sm: "1.25rem", // font size for small screens
-                      },
+                      justifyContent: "space-between",
+                      px: 2,
+                      pb: 2,
                     }}
                   >
-                    {item.title}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+                    <Button
+                      variant="outlined"
+                      size="small"
+                      startIcon={<GitHubIcon />}
+                      href={project.githubUrl}
+                      target="_blank"
+                    >
+                      Code
+                    </Button>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      endIcon={<OpenInNewIcon />}
+                      href={project.demoUrl}
+                      target="_blank"
+                    >
+                      Live Demo
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </div>
     </section>
   );
-};
-
-export default Portfolio;
+}
