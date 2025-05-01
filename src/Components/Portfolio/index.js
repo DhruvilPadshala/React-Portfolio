@@ -21,7 +21,7 @@ const projects = [
     id: 1,
     title: "Developer Portfolio Website",
     description:
-      "A sleek and professional personal portfolio website designed to showcase my skills, projects, and services. The site highlights my experience and expertise through a clean and modern design.   It provides a user-friendly interface for visitors to easily navigate through my work.",
+      "A sleek and professional personal portfolio website designed to showcase my skills, projects, and services.",
     image: Portfolio1,
     tags: [
       "React",
@@ -32,7 +32,6 @@ const projects = [
     ],
     demoUrl: "/",
     githubUrl: "https://github.com/DhruvilPadshala/React-Portfolio",
-    newPageUrl: "/new-page-1",
   },
   {
     id: 2,
@@ -72,101 +71,109 @@ const projects = [
 export default function Portfolio() {
   return (
     <section id="portfolio">
-      <div>
-        <Box sx={{ py: 8, px: 2 }}>
-          <Box sx={{ textAlign: "center", mb: 6 }}>
-            <Typography
-              variant="h2"
-              component="h2"
-              fontWeight={"bold"}
-              gutterBottom
-              align="center"
-              sx={{
-                fontSize: { xs: "2.5rem", md: "4rem" },
-                textAlign: "center",
-              }}
-            >
-              My Portfolio
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              color="text.secondary"
-              maxWidth="600px"
-              mx="auto"
-            >
-              Explore my recent projects and see how I can help bring your ideas
-              to life.
-            </Typography>
-          </Box>
-
-          <Grid
-            container
-            spacing={4}
-            justifyContent="center"
-            sx={{ width: "90%", margin: "0 auto", backgroundColor: "#f0f2f5" }}
+      <Box sx={{ py: { xs: 4, md: 8 }, px: { xs: 1, md: 4 } }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
+          <Typography
+            variant="h2"
+            component="h2"
+            fontWeight="bold"
+            gutterBottom
+            sx={{
+              fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
+            }}
           >
-            {projects.map((project) => (
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={4}
-                key={project.id}
-                className="flex justify-center items-center"
+            My Portfolio
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            color="text.secondary"
+            maxWidth="600px"
+            mx="auto"
+          >
+            Explore my recent projects and see how I can help bring your ideas
+            to life.
+          </Typography>
+        </Box>
+
+        <Grid
+          container
+          spacing={{ xs: 2, sm: 3, md: 4 }}
+          justifyContent="center"
+          sx={{
+            width: "100%",
+            margin: "0 auto",
+            backgroundColor: "#f0f2f5",
+            px: { xs: 1, sm: 2 },
+          }}
+        >
+          {projects.map((project) => (
+            <Grid item xs={12} sm={6} md={4} key={project.id}>
+              <Card
+                elevation={3}
+                sx={{
+                  margin: "0 auto",
+                  height: "100%",
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  transition: "transform 0.3s",
+                  "&:hover": {
+                    transform: "scale(1.02)",
+                  },
+                  borderRadius: 5,
+                  backgroundColor: "#f0f2f5",
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                }}
               >
-                <Card
-                  elevation={3}
-                  sx={{
-                    transition: "transform 0.3s",
-                    "&:hover": {
-                      transform: "scale(1.02)",
-                    },
-                    backgroundColor: "#f0f2f5",
-                    height: 600,
-                    borderRadius: 5,
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    height="350"
-                    image={project.image}
-                    alt={project.title}
-                  />
-                  <CardContent className="w-[90%] mx-auto">
-                    <Typography variant="h6" gutterBottom>
-                      {project.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" mb={2}>
-                      {project.description}
-                    </Typography>
-                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
-                      {project.tags.map((tag) => (
-                        <Chip
-                          key={tag}
-                          label={tag}
-                          color="primary"
-                          variant="outlined"
-                        />
-                      ))}
-                    </Box>
-                  </CardContent>
-                  <CardActions
+                <CardMedia
+                  component="img"
+                  height="400"
+                  image={project.image}
+                  alt={project.title}
+                  sx={{ objectFit: "cover" }}
+                />
+                <CardContent sx={{ flexGrow: 1, px: 2 }}>
+                  <Typography variant="h6" gutterBottom>
+                    {project.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
                     sx={{
-                      justifyContent: "space-between",
-                      px: 2,
-                      pb: 2,
+                      maxHeight: 80,
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                   >
-                    <Button
-                      variant="outlined"
-                      size="small"
-                      startIcon={<GitHubIcon />}
-                      href={project.githubUrl}
-                      target="_blank"
-                    >
-                      Code
-                    </Button>
+                    {project.description}
+                  </Typography>
+                  <Box
+                    sx={{ display: "flex", flexWrap: "wrap", gap: 1, mt: 2 }}
+                  >
+                    {project.tags.map((tag) => (
+                      <Chip
+                        key={tag}
+                        label={tag}
+                        color="primary"
+                        variant="outlined"
+                      />
+                    ))}
+                  </Box>
+                </CardContent>
+                <CardActions
+                  sx={{ justifyContent: "space-between", px: 2, pb: 2 }}
+                >
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    startIcon={<GitHubIcon />}
+                    href={project.githubUrl}
+                    target="_blank"
+                  >
+                    Code
+                  </Button>
+                  {project.demoUrl && (
                     <Button
                       variant="contained"
                       size="small"
@@ -176,13 +183,13 @@ export default function Portfolio() {
                     >
                       Live Demo
                     </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-      </div>
+                  )}
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </section>
   );
 }
