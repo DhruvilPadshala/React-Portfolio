@@ -30,6 +30,7 @@ const projects = [
       "React Router Dom",
       "Email.JS",
     ],
+
     demoUrl: "/",
     githubUrl: "https://github.com/DhruvilPadshala/React-Portfolio",
   },
@@ -46,6 +47,7 @@ const projects = [
       "Express.js",
       "MongoDB",
     ],
+    more: true,
     demoUrl: "",
     githubUrl: "https://github.com/DhruvilPadshala/Gate-Pass-App",
   },
@@ -63,6 +65,7 @@ const projects = [
       "Express.js",
       "MongoDB",
     ],
+    more: true,
     demoUrl: "https://dhruvil-gate-pass.vercel.app/",
     githubUrl: "https://github.com/dhruvilshah884/gate-pass-admin-panel",
   },
@@ -71,7 +74,20 @@ const projects = [
 export default function Portfolio() {
   return (
     <section id="portfolio">
-      <Box sx={{ py: { xs: 4, md: 8 }, px: { xs: 1, md: 4 } }}>
+      <Box
+        sx={{
+          flexGrow: 1,
+          p: { xs: 1, md: 2 },
+          backgroundColor: "#f0f2f5",
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
+          flexDirection: "column",
+          width: { xs: "100%", md: "75%" },
+          margin: "0 auto",
+          mt: { xs: 3, md: 3 },
+        }}
+      >
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography
             variant="h2"
@@ -94,14 +110,11 @@ export default function Portfolio() {
             to life.
           </Typography>
         </Box>
-
         <Grid
           container
           spacing={{ xs: 2, sm: 3, md: 4 }}
-          justifyContent="center"
           sx={{
             width: "100%",
-            margin: "0 auto",
             backgroundColor: "#f0f2f5",
             px: { xs: 1, sm: 2 },
           }}
@@ -182,6 +195,16 @@ export default function Portfolio() {
                       target="_blank"
                     >
                       Live Demo
+                    </Button>
+                  )}
+                  {project.more && (
+                    <Button
+                      variant="contained"
+                      size="small"
+                      href={project.demoUrl}
+                      target="_blank"
+                    >
+                      More
                     </Button>
                   )}
                 </CardActions>
