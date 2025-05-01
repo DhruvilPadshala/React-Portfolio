@@ -65,7 +65,7 @@ const projects = [
       "Express.js",
       "MongoDB",
     ],
-    more: true,
+    more: "/GatePassProjectDetails",
     demoUrl: "https://dhruvil-gate-pass.vercel.app/",
     githubUrl: "https://github.com/dhruvilshah884/gate-pass-admin-panel",
   },
@@ -201,7 +201,7 @@ export default function Portfolio() {
                     <Button
                       variant="contained"
                       size="small"
-                      href={project.demoUrl}
+                      href={project.more}
                       target="_blank"
                     >
                       More
