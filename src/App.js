@@ -9,10 +9,10 @@ import Footer from "./Components/Footer";
 import Blog from "./Components/Blog";
 import ScrollToTop from "./Components/ScrollToTop";
 import GatePassProjectDetails from "./Components/gate-pass";
-
+import GatePassApp from "./Components/gate-pass-App";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
     <Router>
       <ScrollToTop />
@@ -36,9 +36,8 @@ function App() {
           path="/GatePassProjectDetails"
           element={<GatePassProjectDetails />}
         />
+        <Route path="/GatePassApp" element={<GatePassApp />} />
       </Routes>
     </Router>
   );
 }
-
-export default App;

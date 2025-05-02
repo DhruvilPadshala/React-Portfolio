@@ -47,7 +47,7 @@ const projects = [
       "Express.js",
       "MongoDB",
     ],
-    more: true,
+    more: "/GatePassApp",
     demoUrl: "",
     githubUrl: "https://github.com/DhruvilPadshala/Gate-Pass-App",
   },

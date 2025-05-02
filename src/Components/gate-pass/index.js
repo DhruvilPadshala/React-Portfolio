@@ -64,7 +64,7 @@ const GatePassDetails = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-    document.title = "Gate Pass Management System | Dhruvil's Portfolio";
+    document.title = "Gate Pass Admin Panel";
     window.scrollTo(0, 0);
   }, []);
 
