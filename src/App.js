@@ -8,20 +8,36 @@ import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Blog from "./Components/Blog";
 import ScrollToTop from "./Components/ScrollToTop";
-function App() {
+import GatePassProjectDetails from "./Components/gate-pass";
+import GatePassApp from "./Components/gate-pass-App";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+export default function App() {
   return (
-    <div>
-      <Header />
-      <Home />
-      <Features />
-      <Portfolio />
-      <Resume />
-      <Blog />
-      <Contact />
-      <Footer />
+    <Router>
       <ScrollToTop />
-    </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <Home />
+              <Features />
+              <Portfolio />
+              <Resume />
+              <Blog />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/GatePassProjectDetails"
+          element={<GatePassProjectDetails />}
+        />
+        <Route path="/GatePassApp" element={<GatePassApp />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;

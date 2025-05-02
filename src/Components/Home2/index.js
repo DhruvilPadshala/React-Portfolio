@@ -17,7 +17,7 @@ const fadeIn = keyframes`
 
 const Home = () => {
   useEffect(() => {
-    document.title = "Dhruvil";
+    document.title = "Dhruvil || Portfolio";
   }, []);
   const scrollToSection = (section) => {
     scroller.scrollTo(section, {
