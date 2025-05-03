@@ -36,7 +36,6 @@ import Maintenance from "../../assets/gate-pass-web/maintenance.png";
 import Complaint from "../../assets/gate-pass-web/compaint.png";
 import Near from "../../assets/gate-pass-web/near-place.png";
 import Residance from "../../assets/gate-pass-web/residance.png";
-import Header from "../Header";
 import Footer from "../Footer";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -82,13 +81,11 @@ const GatePassDetails = () => {
 
   return (
     <>
-      <Header />
       <Box
         sx={{
           minHeight: "100vh",
           backgroundColor: "#f0f2f5",
           display: "flex",
-          mt: 10,
           py: 4,
         }}
       >
@@ -319,7 +316,14 @@ const GatePassDetails = () => {
             </Typography>
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -331,7 +335,7 @@ const GatePassDetails = () => {
                   >
                     <PeopleIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Role-Based Access Control
                     </Typography>
@@ -344,7 +348,14 @@ const GatePassDetails = () => {
               </Grid>
 
               <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -356,7 +367,7 @@ const GatePassDetails = () => {
                   >
                     <VpnKeyIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Digital Pass Generation
                     </Typography>
@@ -369,7 +380,14 @@ const GatePassDetails = () => {
               </Grid>
 
               <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -381,7 +399,7 @@ const GatePassDetails = () => {
                   >
                     <NotificationsIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Real-time Notifications
                     </Typography>
@@ -394,7 +412,14 @@ const GatePassDetails = () => {
               </Grid>
 
               <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -406,7 +431,7 @@ const GatePassDetails = () => {
                   >
                     <AccessTimeIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Time Tracking
                     </Typography>
@@ -419,7 +444,14 @@ const GatePassDetails = () => {
               </Grid>
 
               <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -431,7 +463,7 @@ const GatePassDetails = () => {
                   >
                     <SecurityIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Security Protocols
                     </Typography>
@@ -444,7 +476,14 @@ const GatePassDetails = () => {
               </Grid>
 
               <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -456,7 +495,7 @@ const GatePassDetails = () => {
                   >
                     <DescriptionIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Comprehensive Reporting
                     </Typography>
@@ -919,7 +958,7 @@ const GatePassDetails = () => {
             </Grid>
           </TabPanel>
         </Container>
-      </Box>{" "}
+      </Box>
       <Modal
         open={openModal}
         onClose={handleCloseModal}

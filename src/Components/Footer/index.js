@@ -45,7 +45,15 @@ const Footer = (link) => {
               <Typography variant="h6" color="#fff">
                 Dhruvil Padshala
               </Typography>
-              <Typography variant="body2" sx={{ mt: 1, color: "#aaaeaf" }}>
+              <Typography
+                variant="body2"
+                sx={{
+                  mt: 1,
+                  color: "#aaaeaf",
+                  lineHeight: 2.2,
+                  fontSize: "1.05rem",
+                }}
+              >
                 +91 7016881034
                 <br />
                 padshaladhruvil5@gmail.com
@@ -53,7 +61,15 @@ const Footer = (link) => {
             </Grid>
             <Grid item xs={12} md={3}>
               <Typography variant="h6">Services</Typography>
-              <Typography variant="body2" sx={{ mt: 1, color: "#aaaeaf" }}>
+              <Typography
+                variant="body2"
+                sx={{
+                  mt: 1,
+                  color: "#aaaeaf",
+                  lineHeight: 2.2,
+                  fontSize: "1.05rem",
+                }}
+              >
                 Web Development
                 <br />
                 UI/UX Design
@@ -68,85 +84,41 @@ const Footer = (link) => {
               </Typography>
             </Grid>
             <Grid item xs={12} md={3}>
-              <Typography variant="h6">Links</Typography>
-              <Typography variant="body2" sx={{ mt: 1 }}>
-                <ScrollLink
-                  to="home"
-                  spy={true}
-                  smooth={true}
-                  duration={800}
-                  style={linkStyle}
-                  onMouseEnter={handleHover}
-                  onMouseLeave={handleLeave}
-                  onClick={() => handleLinkClick("home")}
-                >
-                  Home
-                </ScrollLink>
-                <br />
-                <ScrollLink
-                  to="features"
-                  spy={true}
-                  smooth={true}
-                  duration={800}
-                  style={linkStyle}
-                  onMouseEnter={handleHover}
-                  onMouseLeave={handleLeave}
-                  onClick={() => handleLinkClick("features")}
-                >
-                  Features
-                </ScrollLink>
-                <br />
-                <ScrollLink
-                  to="portfolio"
-                  spy={true}
-                  smooth={true}
-                  duration={800}
-                  style={linkStyle}
-                  onMouseEnter={handleHover}
-                  onMouseLeave={handleLeave}
-                  onClick={() => handleLinkClick("portfolio")}
-                >
-                  Portfolio
-                </ScrollLink>
-                <br />
-                <ScrollLink
-                  to="resume"
-                  spy={true}
-                  smooth={true}
-                  duration={800}
-                  style={linkStyle}
-                  onMouseEnter={handleHover}
-                  onMouseLeave={handleLeave}
-                  onClick={() => handleLinkClick("resume")}
-                >
-                  Resume
-                </ScrollLink>
-                <br />
-                <ScrollLink
-                  to="blog"
-                  spy={true}
-                  smooth={true}
-                  duration={800}
-                  style={linkStyle}
-                  onMouseEnter={handleHover}
-                  onMouseLeave={handleLeave}
-                  onClick={() => handleLinkClick("blog")}
-                >
-                  Blog
-                </ScrollLink>
-                <br />
-                <ScrollLink
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  duration={800}
-                  style={linkStyle}
-                  onMouseEnter={handleHover}
-                  onMouseLeave={handleLeave}
-                  onClick={() => handleLinkClick("contact")}
-                >
-                  Contact
-                </ScrollLink>
+              <Typography variant="h6" color="#fff">
+                Links
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  mt: 1,
+                  color: "#aaaeaf",
+                  lineHeight: 2.2,
+                  fontSize: "1.05rem",
+                }}
+              >
+                {[
+                  { to: "home", label: "Home" },
+                  { to: "features", label: "Features" },
+                  { to: "portfolio", label: "Portfolio" },
+                  { to: "resume", label: "Resume" },
+                  { to: "blog", label: "Blog" },
+                  { to: "contact", label: "Contact" },
+                ].map((link) => (
+                  <ScrollLink
+                    key={link.to}
+                    to={link.to}
+                    spy={true}
+                    smooth={true}
+                    duration={800}
+                    style={linkStyle}
+                    onMouseEnter={handleHover}
+                    onMouseLeave={handleLeave}
+                    onClick={() => handleLinkClick(link.to)}
+                  >
+                    {link.label}
+                    <br />
+                  </ScrollLink>
+                ))}
               </Typography>
             </Grid>
           </Grid>

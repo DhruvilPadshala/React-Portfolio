@@ -145,7 +145,7 @@ const Resume = () => {
           onChange={handleTabChange}
           aria-label="resume tabs"
           className="tabs"
-          TabIndicatorProps={{ style: { display: "none" } }} 
+          TabIndicatorProps={{ style: { display: "none" } }}
           sx={{
             mb: 2,
             mt: 3,
@@ -154,7 +154,7 @@ const Resume = () => {
             width: { xs: "90%", md: "75%" },
             flexWrap: "wrap",
             "& .MuiTabs-flexContainer": {
-              flexDirection: { xs: "column",sm: "row", md: "row" }, 
+              flexDirection: { xs: "column", sm: "row", md: "row" },
             },
             "& .MuiTab-root": {
               textAlign: "center",
@@ -203,7 +203,7 @@ const Resume = () => {
                   },
                 }}
               >
-                <CardContent sx={{ p: 4 }}>
+                <CardContent sx={{ p: 4, mb: 2 }}>
                   <Typography
                     sx={{ fontSize: { xs: "1.2rem", md: "1.5rem" } }}
                     fontWeight={"semi-bold"}
