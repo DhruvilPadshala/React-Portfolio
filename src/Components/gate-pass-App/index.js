@@ -33,7 +33,6 @@ import BuildIcon from "@mui/icons-material/Build";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import { Link } from "react-router-dom";
-import Header from "../Header";
 import Footer from "../Footer";
 import admin from "../../assets/Portfolio/gate-pass.png";
 import Login from "../../assets/gate-pass-app/login.jpg";
@@ -94,13 +93,11 @@ const GatePassApp = () => {
 
   return (
     <>
-      <Header />
       <Box
         sx={{
           minHeight: "100vh",
           backgroundColor: "#f0f2f5",
           display: "flex",
-          mt: 10,
           py: 4,
         }}
       >
@@ -463,9 +460,16 @@ const GatePassApp = () => {
             >
               Residence User Features
             </Typography>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+            <Grid container spacing={3} alignItems="stretch">
+              <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    flex: 1,
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -473,11 +477,12 @@ const GatePassApp = () => {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
+                      flexShrink: 0,
                     }}
                   >
                     <HomeIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Home Dashboard
                     </Typography>
@@ -489,8 +494,15 @@ const GatePassApp = () => {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+              <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -498,11 +510,12 @@ const GatePassApp = () => {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
+                      flexShrink: 0,
                     }}
                   >
                     <PersonIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Visitor Management
                     </Typography>
@@ -514,7 +527,14 @@ const GatePassApp = () => {
                 </Card>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -526,7 +546,7 @@ const GatePassApp = () => {
                   >
                     <ReportProblemIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Complaint System
                     </Typography>
@@ -538,7 +558,14 @@ const GatePassApp = () => {
                 </Card>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -550,7 +577,7 @@ const GatePassApp = () => {
                   >
                     <BuildIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Maintenance Requests
                     </Typography>
@@ -562,7 +589,14 @@ const GatePassApp = () => {
                 </Card>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -574,7 +608,7 @@ const GatePassApp = () => {
                   >
                     <LocationOnIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Nearby Places
                     </Typography>
@@ -586,7 +620,14 @@ const GatePassApp = () => {
                 </Card>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -598,7 +639,7 @@ const GatePassApp = () => {
                   >
                     <SettingsIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Profile & Settings
                     </Typography>
@@ -620,9 +661,16 @@ const GatePassApp = () => {
             >
               Security User Features
             </Typography>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+            <Grid container spacing={3} alignItems="stretch">
+              <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    flex: 1,
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -630,11 +678,12 @@ const GatePassApp = () => {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
+                      flexShrink: 0,
                     }}
                   >
                     <DashboardIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Security Dashboard
                     </Typography>
@@ -646,8 +695,16 @@ const GatePassApp = () => {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+
+              <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    flex: 1,
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -655,11 +712,12 @@ const GatePassApp = () => {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
+                      flexShrink: 0,
                     }}
                   >
                     <PersonIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Visitor Verification
                     </Typography>
@@ -670,8 +728,16 @@ const GatePassApp = () => {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+
+              <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    flex: 1,
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -679,11 +745,12 @@ const GatePassApp = () => {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
+                      flexShrink: 0,
                     }}
                   >
                     <AccessTimeIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Entry/Exit Tracking
                     </Typography>
@@ -694,8 +761,16 @@ const GatePassApp = () => {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+
+              <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    flex: 1,
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -703,11 +778,12 @@ const GatePassApp = () => {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
+                      flexShrink: 0,
                     }}
                   >
                     <NotificationsIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Real-time Notifications
                     </Typography>
@@ -718,8 +794,16 @@ const GatePassApp = () => {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Card sx={{ display: "flex", height: "100%", boxShadow: 2 }}>
+
+              <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    flex: 1,
+                    boxShadow: 2,
+                    bgcolor: "#f0f2f5",
+                  }}
+                >
                   <Box
                     sx={{
                       p: 2,
@@ -727,11 +811,12 @@ const GatePassApp = () => {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
+                      flexShrink: 0,
                     }}
                   >
                     <SettingsIcon sx={{ fontSize: 40, color: "blue" }} />
                   </Box>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: "1 1 auto" }}>
                     <Typography component="div" variant="h6">
                       Profile & Settings
                     </Typography>
@@ -1159,7 +1244,7 @@ const GatePassApp = () => {
                 </List>
               </Grid>
             </Grid>
-          </TabPanel>{" "}
+          </TabPanel>
           <TabPanel value={activeTab} index={3}>
             <Typography
               variant="h5"
