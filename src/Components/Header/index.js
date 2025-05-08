@@ -50,15 +50,14 @@ const Header = () => {
     }
     setLastScrollY(window.scrollY);
   }, [lastScrollY]);
-  
+
   useEffect(() => {
     window.addEventListener("scroll", controlHeader);
-  
+
     return () => {
       window.removeEventListener("scroll", controlHeader);
     };
   }, [controlHeader]);
-  
 
   const drawerContent = (
     <Box
@@ -98,13 +97,48 @@ const Header = () => {
             <ListItemText primary={item.title} />
           </ListItem>
         ))}
+        <ListItem
+          button
+          key="resume"
+          sx={{
+            display: "flex",
+            width: "80%",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "fixed",
+            bottom: 60,
+            left: 0,
+            right: 0,
+          }}
+        >
+          <a
+            href="/Resume.pdf"
+            download="Resume.pdf"
+            style={{
+              color: "white",
+              backgroundColor: "#007bff",
+              padding: "8px 16px",
+              borderRadius: "5px",
+              textDecoration: "none",
+            }}
+          >
+            Download CV
+          </a>
+        </ListItem>
       </List>
       <Box
         className="icons"
         display="flex"
         justifyContent="center"
         alignItems="center"
-        sx={{ mt: { xs: 0, md: 2 } }}
+        sx={{
+          mt: { xs: 0, md: 2 },
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          width: "80%",
+        }}
       >
         <Facebook sx={{ mx: 1 }} />
         <Instagram sx={{ mx: 1 }} />
@@ -142,6 +176,21 @@ const Header = () => {
                 </li>
               ))}
             </ul>
+            <li style={{ listStyle: "none" }}>
+              <a
+                href="/Resume.pdf"
+                download="Resume.pdf"
+                style={{
+                  color: "white",
+                  backgroundColor: "#007bff",
+                  padding: "8px 16px",
+                  borderRadius: "5px",
+                  textDecoration: "none",
+                }}
+              >
+                Download CV
+              </a>
+            </li>
           </div>
           <div className="mobile-menu">
             <IconButton
@@ -157,7 +206,7 @@ const Header = () => {
               onClose={toggleDrawer(false)}
               sx={{
                 "& .MuiDrawer-paper": {
-                  width: "70%",
+                  width: "80%",
                 },
               }}
             >
