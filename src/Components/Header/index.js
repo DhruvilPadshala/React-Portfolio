@@ -112,8 +112,8 @@ const Header = () => {
           }}
         >
           <a
-            href="/Resume(1).pdf"
-            download="Resume(1).pdf"
+            href="/Resume.pdf"
+            download="Resume.pdf"
             style={{
               color: "white",
               backgroundColor: "#007bff",
@@ -178,8 +178,8 @@ const Header = () => {
             </ul>
             <li style={{ listStyle: "none" }}>
               <a
-                href="/Resume(1).pdf"
-                download="Resume(1).pdf"
+                href="/Resume.pdf"
+                download="Resume.pdf"
                 style={{
                   color: "white",
                   backgroundColor: "#007bff",

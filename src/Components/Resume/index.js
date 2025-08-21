@@ -21,10 +21,10 @@ const contentData = {
     },
     {
       title: "Job Experience",
-      subTitle: "Internship",
-      subTitle1: "Quickint Solutions ",
+      subTitle: "Mern Stack Developer",
+      subTitle1: "Quickint Solutions (May 2024 - present)",
       description:
-        "During the internship at Quickint Solutions, I gained valuable experience and practical skills in a dynamic work environment. My responsibilities included hands-on projects, collaboration with team members, and applying theoretical knowledge to real-world scenarios. This experience allowed me to develop problem-solving skills, enhance my technical abilities, and gain insight into the professional world.",
+        "As a MERN Stack Developer, I have contributed to live projects using MongoDB, Express.js, React.js, and Node.js, applying theoretical knowledge to real-world scenarios. Through this work, I gained hands-on experience in developing scalable full-stack solutions, strengthening my technical expertise and problem-solving skills. Collaborating within agile teams has helped me grow as an adaptable and effective team player, capable of delivering clean, maintainable, and performance-driven applications.",
     },
     {
       title: "",
@@ -33,12 +33,13 @@ const contentData = {
       description:
         " Explore advanced concepts in physics, chemistry, and Mathematics through interactive lessons and practical experiments. This educational journey is designed to deepen your understanding of scientific principles and prepare you for higher education and future careers in science. Engage with hands-on activities and real-world applications to solidify your knowledge and critical thinking skills.",
     },
+
     {
       title: "",
-      subTitle: "Internship",
-      subTitle1: "Way to Web",
+      subTitle: "Mern Stack Developer-Internship",
+      subTitle1: "Quickint Solutions (Nov 2023)",
       description:
-        "This course covers fundamental principles such as layout, color theory, typography, and responsive design. Gain practical experience with popular design tools and techniques to build engaging and functional web interfaces. Through interactive lessons and real-world projects, you'll develop the skills needed to craft compelling web experiences that captivate users and achieve your design goals.",
+        "I have gained hands-on experience in MongoDB, Express.js, React.js, and Node.js through real-world projects, strengthening my full-stack development skills. I have built and deployed scalable applications with a focus on performance, maintainability, and user experience. My work includes implementing RESTful APIs, authentication, and effective state management. Additionally, I have improved team efficiency using Git/GitHub and agile methodologies for streamlined development.",
     },
   ],
   1: [
