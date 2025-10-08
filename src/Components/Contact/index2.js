@@ -67,8 +67,10 @@ const ContactForm = () => {
       return;
     }
 
-    emailjs.send(serviceId, templateId, formData, publicKey).then(
-      (response) => {
+    emailjs
+      .send(serviceId, templateId, formData, publicKey)
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
         setStatusMessage("Your message has been sent successfully!");
         setFormData({
           name: "",
@@ -78,11 +80,11 @@ const ContactForm = () => {
           message: "",
         });
         setError({});
-      },
-      (error) => {
+      })
+      .catch((error) => {
+        console.error("FAILED...", error);
         setStatusMessage("Failed to send your message. Please try again.");
-      }
-    );
+      });
   };
 
   return (
@@ -106,7 +108,6 @@ const ContactForm = () => {
         spacing={2}
         sx={{ height: { xs: "auto", md: "80%" }, marginTop: "1.5rem" }}
       >
-        {/* Form Fields with Error Messages */}
         {["name", "phone", "email", "subject", "message"].map((field) => (
           <Grid item xs={12} key={field}>
             <TextField
